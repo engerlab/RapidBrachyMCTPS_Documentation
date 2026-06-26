@@ -1,7 +1,7 @@
 # Catheters
 If you loaded an RT plan during the plan initialization, the catheter table will automatically be populated.
 
-<img src="img/catheterTable.png" width="500">
+![Catheter Table](img/catheterTable.png){ width="500" }
 
 If not, the **Catheter tab** in the RapidBrachy Module allows you to create or remove catheter objects. 
 
