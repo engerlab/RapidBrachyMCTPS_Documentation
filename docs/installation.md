@@ -18,7 +18,7 @@ We recommend the **Standalone Application** for clinical users who want a stream
 ### Standalone Application
 This version includes everything you need to run RapidBrachyMCTPS right out of the box.
 
-1. Download the latest release from the [OneDrive](#).
+1. Download the latest release from the OneDrive.
 2. Extract the downloaded archive to your preferred directory.
 3. Run the `RapidBrachyMCTPS` executable file.
 
@@ -66,10 +66,22 @@ RapidBrachy will now appear in the toolbar at the top of the screen, allowing yo
 ### Installing RapidBrachyMC
 If you will want to run Monte Carlo simulations, you will need to install [RapidBrachyMC](https://github.com/engerlab/RapidBrachyMC), the Geant4-based Monte Carlo engine. You have two options when installing RapidBrachyMC:
 
-1. Installing RapidBrachyMC from source.
-2. Installing the RapidBrachyMC Docker image (**recommended**).
+1. Installing the RapidBrachyMC Docker image.
+2. Installing RapidBrachyMC from source.
 
-Installation instructions for both options are outlined in the [RapidBrachyMC GitHub Repository](https://github.com/engerlab/RapidBrachyMC). If you choose to use the Docker Image, you will need to have [Docker Engine](https://docs.docker.com/engine/install/) (Linux) or [Docker Desktop](https://docs.docker.com/desktop/setup/install/windows-install/) (Windows) installed.
+#### Using Docker Image (Recommended)
+Download the docker image (rapidbrachy_mc.tar) from the OneDrive and place it in your desired location. 
+
+* If you are using **Linux**, you will need to install [Docker Engine](https://docs.docker.com/engine/install/).
+* If you are using **Windows**, you will need to install [Docker Desktop](https://docs.docker.com/desktop/setup/install/windows-install/). 
+
+Then run this command in the Terminal/PowerShell:
+```sh
+docker load -i Path/To/rapidbrachy_mc.tar
+```
+
+#### Installing from source
+You will need permission from engerlab to clone the [RapidBrachyMC GitHub Repository](https://github.com/engerlab/RapidBrachyMC) to install from source. Installation instructions are found in the README of the repository.
 
 #### For Developers
 If you are developing this module, enable Developer Mode in Slicer by navigating to `Edit` > `Application` > `Settings` > `Developer` and clicking `Enable developer mode`.
