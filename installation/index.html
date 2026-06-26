@@ -67,6 +67,10 @@
     </li>
     <li class="toctree-l3"><a class="reference internal" href="#installing-rapidbrachymc">Installing RapidBrachyMC</a>
         <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#using-docker-image-recommended">Using Docker Image (Recommended)</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#installing-from-source">Installing from source</a>
+    </li>
     <li class="toctree-l4"><a class="reference internal" href="#for-developers">For Developers</a>
     </li>
         </ul>
@@ -187,7 +191,7 @@
 <h3 id="standalone-application">Standalone Application</h3>
 <p>This version includes everything you need to run RapidBrachyMCTPS right out of the box.</p>
 <ol>
-<li>Download the latest release from the <a href="#">OneDrive</a>.</li>
+<li>Download the latest release from the OneDrive.</li>
 <li>Extract the downloaded archive to your preferred directory.</li>
 <li>Run the <code>RapidBrachyMCTPS</code> executable file.</li>
 </ol>
@@ -218,10 +222,20 @@ pip_install(&quot;-e /Path/To/brachyutils&quot;)
 <h3 id="installing-rapidbrachymc">Installing RapidBrachyMC</h3>
 <p>If you will want to run Monte Carlo simulations, you will need to install <a href="https://github.com/engerlab/RapidBrachyMC">RapidBrachyMC</a>, the Geant4-based Monte Carlo engine. You have two options when installing RapidBrachyMC:</p>
 <ol>
+<li>Installing the RapidBrachyMC Docker image.</li>
 <li>Installing RapidBrachyMC from source.</li>
-<li>Installing the RapidBrachyMC Docker image (<strong>recommended</strong>).</li>
 </ol>
-<p>Installation instructions for both options are outlined in the <a href="https://github.com/engerlab/RapidBrachyMC">RapidBrachyMC GitHub Repository</a>. If you choose to use the Docker Image, you will need to have <a href="https://docs.docker.com/engine/install/">Docker Engine</a> (Linux) or <a href="https://docs.docker.com/desktop/setup/install/windows-install/">Docker Desktop</a> (Windows) installed.</p>
+<h4 id="using-docker-image-recommended">Using Docker Image (Recommended)</h4>
+<p>Download the docker image (rapidbrachy_mc.tar) from the OneDrive and place it in your desired location. </p>
+<ul>
+<li>If you are using <strong>Linux</strong>, you will need to install <a href="https://docs.docker.com/engine/install/">Docker Engine</a>.</li>
+<li>If you are using <strong>Windows</strong>, you will need to install <a href="https://docs.docker.com/desktop/setup/install/windows-install/">Docker Desktop</a>. </li>
+</ul>
+<p>Then run this command in the Terminal/PowerShell:</p>
+<pre><code class="language-sh">docker load -i Path/To/rapidbrachy_mc.tar
+</code></pre>
+<h4 id="installing-from-source">Installing from source</h4>
+<p>You will need permission from engerlab to clone the <a href="https://github.com/engerlab/RapidBrachyMC">RapidBrachyMC GitHub Repository</a> to install from source. Installation instructions are found in the README of the repository.</p>
 <h4 id="for-developers">For Developers</h4>
 <p>If you are developing this module, enable Developer Mode in Slicer by navigating to <code>Edit</code> &gt; <code>Application</code> &gt; <code>Settings</code> &gt; <code>Developer</code> and clicking <code>Enable developer mode</code>.</p>
 <h2 id="dark-mode">Dark Mode</h2>
