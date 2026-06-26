@@ -19,4 +19,4 @@ theme: readthedocs
 extra_css:
   - css/custom.css
 
-use_directory_urls: false
+# use_directory_urls: false

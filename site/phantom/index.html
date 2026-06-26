@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="shortcut icon" href="../img/favicon.ico" />
+    <title>Assigning Material and Density - RapidBrachyMCTPS</title>
+    <link rel="stylesheet" href="../css/theme.css" />
+    <link rel="stylesheet" href="../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+        <link href="../css/custom.css" rel="stylesheet" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Assigning Material and Density";
+        var mkdocs_page_input_path = "phantom.md";
+        var mkdocs_page_url = null;
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href=".." class="icon icon-home"> RapidBrachyMCTPS
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="..">Home</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../about/">About</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../installation/">Getting Started</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../import/">Data Loading and Viewing</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../plan/">Initializing a Plan</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../catheter/">Catheters</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../applicator/">Applicators</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../contouring/">Contouring</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../registration/">Registration</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../source/">Source</a>
+                </li>
+              </ul>
+              <ul class="current">
+                <li class="toctree-l1 current"><a class="reference internal current" href="#">Assigning Material and Density</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#assigning-material-from-ct">Assigning Material from CT</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#assigning-material-by-contour-recommended">Assigning Material by Contour (Recommended)</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#initialize-phantom">Initialize Phantom</a>
+    </li>
+    </ul>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../dose/">Dose</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../optimization/">Optimizing Dwell Times</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../dvh/">DVH Metrics</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../export/">Data Saving</a>
+                </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="..">RapidBrachyMCTPS</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href=".." class="icon icon-home" aria-label="Docs"></a></li>
+      <li class="breadcrumb-item active">Assigning Material and Density</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="assigning-material-and-density">Assigning Material and Density</h1>
+<p>Materials and densities are assigned in the <strong>Phantom tab</strong> of the RapidBrachy module. You must first import a materials table by entering the file path into the <code>Materials Table Path</code> field. </p>
+<p>The materials table is a standard text file where each line defines a material using the following format (separated by spaces):</p>
+<pre><code class="language-Plaintext">Material_Name_1 Density(g/cm3) Hounsfield_Unit
+Material_Name_2 Density(g/cm3) Hounsfield_Unit
+Material_Name_3 Density(g/cm3) Hounsfield_Unit
+...
+</code></pre>
+<p>The values in the table represent the minimum possible HU and density for that material. The system calculates the final density by linearly interpolating between a material's defined point and the point defined for the next material in the sequence.</p>
+<p>You have two options for assigning material and density, selectable via their corresponding checkboxes:</p>
+<ol>
+<li>Assign material from CT</li>
+<li>Assign material by contour</li>
+</ol>
+<p>It is <strong>strongly recommended</strong> to assign materials by contour. Relying solely on CT numbers for material and density can lead to inaccurate simulation results.</p>
+<h3 id="assigning-material-from-ct">Assigning Material from CT</h3>
+<p>If you choose to assign materials from a CT scan, each voxel is automatically assigned a corresponding material and density from the materials table based on its CT number.</p>
+<h3 id="assigning-material-by-contour-recommended">Assigning Material by Contour (Recommended)</h3>
+<p>If you choose to assign materials by contour, you must manually assign the material and density for each individual structure. You can do this by locating the structure in the provided table and double-clicking the <code>Material</code> and <code>Density</code> cells to edit their values directly. <strong>Note:</strong> The TPS will provide an initial guess for each structure's material and density once the materials table is loaded.</p>
+<h3 id="initialize-phantom">Initialize Phantom</h3>
+<p>Once you have assigned the materials and densities, set a resolution for your phantom and click <code>Initialize Phantom</code>. This will create a phantom based on the size of the chosen ROI.</p>
+<p><img src="img/phantom.png" width="900"></p>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../source/" class="btn btn-neutral float-left" title="Source"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../dose/" class="btn btn-neutral float-right" title="Dose">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../source/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../dose/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "..";</script>
+    <script src="../js/theme_extra.js"></script>
+    <script src="../js/theme.js"></script>
+      <script src="../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>

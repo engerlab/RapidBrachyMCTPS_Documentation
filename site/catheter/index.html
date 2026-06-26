@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="shortcut icon" href="../img/favicon.ico" />
+    <title>Catheters - RapidBrachyMCTPS</title>
+    <link rel="stylesheet" href="../css/theme.css" />
+    <link rel="stylesheet" href="../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+        <link href="../css/custom.css" rel="stylesheet" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Catheters";
+        var mkdocs_page_input_path = "catheter.md";
+        var mkdocs_page_url = null;
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href=".." class="icon icon-home"> RapidBrachyMCTPS
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="..">Home</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../about/">About</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../installation/">Getting Started</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../import/">Data Loading and Viewing</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../plan/">Initializing a Plan</a>
+                </li>
+              </ul>
+              <ul class="current">
+                <li class="toctree-l1 current"><a class="reference internal current" href="#">Catheters</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#adding-catheters">Adding Catheters</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#removing-catheters">Removing Catheters</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#shielded-applicator">Shielded Applicator</a>
+    </li>
+    </ul>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../applicator/">Applicators</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../contouring/">Contouring</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../registration/">Registration</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../source/">Source</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../phantom/">Assigning Material and Density</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../dose/">Dose</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../optimization/">Optimizing Dwell Times</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../dvh/">DVH Metrics</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../export/">Data Saving</a>
+                </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="..">RapidBrachyMCTPS</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href=".." class="icon icon-home" aria-label="Docs"></a></li>
+      <li class="breadcrumb-item active">Catheters</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="catheters">Catheters</h1>
+<p>If you loaded an RT plan during the plan initialization, the catheter table will automatically be populated.</p>
+<p><img src="img/catheterTable.png" width="500"></p>
+<p>If not, the <strong>Catheter tab</strong> in the RapidBrachy Module allows you to create or remove catheter objects. </p>
+<h2 id="adding-catheters">Adding Catheters</h2>
+<ol>
+<li>Open the <strong>Markups module</strong> in the modules tab <img src="img/markups.png" width="25">. </li>
+<li>
+<p>In the Create Markups menu, select <code>Curve</code> to create a new <code>MarkupsCurve</code> object.</p>
+<p><img src="img/curve.png" width="600"></p>
+</li>
+<li>
+<p>Move your cursor to the 2D display panel showing the plane perpendicular to the catheter axis.</p>
+</li>
+<li>Scroll through the slices to locate the starting position for your catheter.</li>
+<li>
+<p>Left-click to place the first point (illustrated by the green dot labelled OC_11 in the figure below).</p>
+<p><img src="img/catheter.png" width="600"></p>
+</li>
+<li>
+<p>Scroll to the next slice and left-click to place the next point. Repeat this process to trace the catheter's path.</p>
+</li>
+<li>Double left-click to place the final point and complete the curve.</li>
+</ol>
+<p>Repeat steps 2 through 7 for each desired catheter. Once finished, navigate to the <strong>Catheter tab</strong> in the RapidBrachy module. Under <code>Add new catheter</code>, input the desired dwell position step size (in mm). Use the <code>Select Markups Curve</code> drop-down menu to select your newly created catheters one at a time, clicking <code>Add</code> for each. The catheter table will automatically populate based on the drawn curves and your chosen step size, assigning a default dwell time of 1 second to each position.</p>
+<h2 id="removing-catheters">Removing Catheters</h2>
+<p>To remove catheters from the table, navigate to the <strong>Catheter tab</strong> in the RapidBrachy module. Under <code>Catheter Operations</code>, select the desired catheters and click <code>Remove</code>.</p>
+<p><strong>Note:</strong> This action only clears the catheters from the table. If you want to permanently delete the catheter object from the scene, navigate to the Data module, find the object in the node list, right-click it, and select <code>Delete</code>.</p>
+<h2 id="shielded-applicator">Shielded Applicator</h2>
+<p>ADD SHIELDED GUIDE</p>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../plan/" class="btn btn-neutral float-left" title="Initializing a Plan"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../applicator/" class="btn btn-neutral float-right" title="Applicators">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../plan/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../applicator/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "..";</script>
+    <script src="../js/theme_extra.js"></script>
+    <script src="../js/theme.js"></script>
+      <script src="../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>
