@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="shortcut icon" href="../img/favicon.ico" />
+    <title>Applicators - RapidBrachyMCTPS</title>
+    <link rel="stylesheet" href="../css/theme.css" />
+    <link rel="stylesheet" href="../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+        <link href="../css/custom.css" rel="stylesheet" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Applicators";
+        var mkdocs_page_input_path = "applicator.md";
+        var mkdocs_page_url = null;
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href=".." class="icon icon-home"> RapidBrachyMCTPS
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="..">Home</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../about/">About</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../installation/">Getting Started</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../import/">Data Loading and Viewing</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../plan/">Initializing a Plan</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../catheter/">Catheters</a>
+                </li>
+              </ul>
+              <ul class="current">
+                <li class="toctree-l1 current"><a class="reference internal current" href="#">Applicators</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#importing-applicator">Importing Applicator</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#applicator-template-json">Applicator Template JSON</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#placing-applicator">Placing Applicator</a>
+    </li>
+    </ul>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../contouring/">Contouring</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../registration/">Registration</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../source/">Source</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../phantom/">Assigning Material and Density</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../dose/">Dose</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../optimization/">Optimizing Dwell Times</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../dvh/">DVH Metrics</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../export/">Data Saving</a>
+                </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="..">RapidBrachyMCTPS</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href=".." class="icon icon-home" aria-label="Docs"></a></li>
+      <li class="breadcrumb-item active">Applicators</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="applicators">Applicators</h1>
+<p>If you have an applicator STL to place, you can do so through the RapidBrachy module's <strong>Applicator tab</strong>. </p>
+<h2 id="importing-applicator">Importing Applicator</h2>
+<p>Click <code>Applicator STL Directory</code> and select the folder with your applicator STL files. Under <code>Applicator Template JSON</code>, enter the path to your applicator template JSON file. </p>
+<h4 id="applicator-template-json">Applicator Template JSON</h4>
+<p>The Applicator Template JSON file acts as a blueprint that provides RapidBrachyMCTPS with the 3D geometry, catheter routing, and source dwell parameters needed to simulate a specific brachytherapy applicator.</p>
+<p>Below is a template for the applicator JSON file. Replace the placeholders values (for exmaple &lt;FLOAT&gt;, &lt;INTEGER&gt;, and &lt;STRING&gt;) with your own data.</p>
+<pre><code class="language-json">{
+    &quot;catheters_dict&quot;: {
+        &quot;&lt;CATHETER_ID_STRING&gt;&quot;: {
+            &quot;index&quot;: &lt;INTEGER&gt;,
+            &quot;dwells&quot;: [
+                {
+                    &quot;index&quot;: &lt;INTEGER&gt;,
+                    &quot;name_id&quot;: &quot;&lt;STRING_IDENTIFIER&gt;&quot;,
+                    &quot;catheter_index&quot;: &lt;INTEGER&gt;,
+                    &quot;angle&quot;: &lt;FLOAT&gt;,
+                    &quot;position&quot;: [
+                        &lt;FLOAT_X&gt;,
+                        &lt;FLOAT_Y&gt;,
+                        &lt;FLOAT_Z&gt;
+                    ],
+                    &quot;relativePos&quot;: &lt;FLOAT&gt;,
+                    &quot;rotation&quot;: [
+                        &lt;FLOAT_X&gt;,
+                        &lt;FLOAT_Y&gt;,
+                        &lt;FLOAT_Z&gt;
+                    ],
+                    &quot;time&quot;: &lt;FLOAT&gt;,
+                    &quot;weight&quot;: &lt;FLOAT&gt;
+                }
+            ],
+            &quot;tip_position&quot;: [
+                &lt;FLOAT_X&gt;,
+                &lt;FLOAT_Y&gt;,
+                &lt;FLOAT_Z&gt;
+            ],
+            &quot;last_dwell_coordinate&quot;: [
+                &lt;FLOAT_X&gt;,
+                &lt;FLOAT_Y&gt;,
+                &lt;FLOAT_Z&gt;
+            ],
+            &quot;step_size&quot;: &lt;FLOAT&gt;,
+            &quot;digitization_points&quot;: [
+                [
+                    &lt;FLOAT_X&gt;,
+                    &lt;FLOAT_Y&gt;,
+                    &lt;FLOAT_Z&gt;
+                ],
+                [
+                    &lt;FLOAT_X&gt;,
+                    &lt;FLOAT_Y&gt;,
+                    &lt;FLOAT_Z&gt;
+                ]
+            ],
+            &quot;afterloader_channel_number&quot;: &lt;INTEGER&gt;,
+            &quot;insert_position&quot;: &lt;NULL_OR_ARRAY_OF_3_FLOATS&gt;,
+            &quot;channel_total_time&quot;: &lt;FLOAT&gt;,
+            &quot;channel_length&quot;: &lt;NULL_OR_FLOAT&gt;
+        }
+    },
+    &quot;step_size&quot;: &lt;FLOAT&gt;,
+    &quot;treatment_time&quot;: &lt;FLOAT&gt;
+}
+</code></pre>
+<h2 id="placing-applicator">Placing Applicator</h2>
+<p>After loading, the applicator will appear in the viewing panels. You can adjust its location and orientation using the center dot and rotation wheel.</p>
+<p>Once properly positioned, click <code>Lock Applicator</code> to automatically populate the catheter table with the dwell positions. If you need to make further adjustments, click <code>Unlock Applicator</code>; note that this action will clear the current dwell positions from the table.</p>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../catheter/" class="btn btn-neutral float-left" title="Catheters"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../contouring/" class="btn btn-neutral float-right" title="Contouring">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../catheter/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../contouring/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "..";</script>
+    <script src="../js/theme_extra.js"></script>
+    <script src="../js/theme.js"></script>
+      <script src="../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>
