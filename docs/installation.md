@@ -43,18 +43,18 @@ import brachyutils
 in the Python console to make sure the module is installed. You may get pydantic warnings, ignore them.
 
 #### Install SlicerRT
-Next, you'll need to install SlicerRT. Open 3D Slicer, click on `Extension Manager` <img src="img/extension_manager.png" width="25"> and type SlicerRT in the search bar. Install SlicerRT and restart 3D Slicer.
+Next, you'll need to install SlicerRT. Open 3D Slicer, click on `Extension Manager` ![extension_manager](img/extension_manager.png){ width="25" } and type SlicerRT in the search bar. Install SlicerRT and restart 3D Slicer.
 
 #### Install RapidBrachyGUI
 Next, you'll need to install RapidBrachyGUI. Open 3D Slicer, click on `Edit`, then open `Application Settings`. On the left panel, click `Modules`, go to the `Additional module paths:` and add the path to RapidBrachyGUI. Then restart 3D Slicer.
 
-<img src="img/edit.png" width="400">
+![edit](img/edit.png){ width="400" }
 
-<img src="img/modules.png" width="600">
+![modules](img/modules.png){ width="600" }
 
-<img src="img/add.png" width="600">
+![add](img/add.png){ width="600" }
 
-<img src="img/path.png" width="600">
+![path](img/path.png){ width="600" }
 
 
 To access the RapidBrachy module, either search for it using the module search bar or select `Brachytherapy` from the module dropdown menu and choose RapidBrachy.

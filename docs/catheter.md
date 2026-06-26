@@ -7,16 +7,16 @@ If not, the **Catheter tab** in the RapidBrachy Module allows you to create or r
 
 ## Adding Catheters
 
-1. Open the **Markups module** in the modules tab <img src="img/markups.png" width="25">. 
+1. Open the **Markups module** in the modules tab ![markups](img/markups.png){ width="25" }. 
 2. In the Create Markups menu, select `Curve` to create a new `MarkupsCurve` object.
 
-    <img src="img/curve.png" width="600">
+    ![Curve](img/curve.png){ width="600" }
 
 3. Move your cursor to the 2D display panel showing the plane perpendicular to the catheter axis.
 4. Scroll through the slices to locate the starting position for your catheter.
 5. Left-click to place the first point (illustrated by the green dot labelled OC_11 in the figure below).
 
-    <img src="img/catheter.png" width="600">
+    ![Catheter](img/catheter.png){ width="600" }
 
 6. Scroll to the next slice and left-click to place the next point. Repeat this process to trace the catheter's path.
 7. Double left-click to place the final point and complete the curve.

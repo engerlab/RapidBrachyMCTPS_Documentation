@@ -27,4 +27,4 @@ If you choose to assign materials by contour, you must manually assign the mater
 ### Initialize Phantom
 Once you have assigned the materials and densities, set a resolution for your phantom and click `Initialize Phantom`. This will create a phantom based on the size of the chosen ROI.
 
-<img src="img/phantom.png" width="900">
+![phantom](img/phantom.png){ width="900" }
