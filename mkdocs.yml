@@ -1,0 +1,22 @@
+site_name: RapidBrachyMCTPS
+nav:
+  - Home: index.md
+  - About: about.md
+  - Getting Started : installation.md
+  - Data Loading and Viewing: import.md
+  - Initializing a Plan: plan.md
+  - Catheters: catheter.md
+  - Applicators: applicator.md
+  - Contouring: contouring.md
+  - Registration: registration.md
+  - Source: source.md
+  - Assigning Material and Density: phantom.md
+  - Dose: dose.md
+  - Optimizing Dwell Times: optimization.md
+  - DVH Metrics: dvh.md
+  - Data Saving: export.md
+theme: readthedocs
+extra_css:
+  - css/custom.css
+
+use_directory_urls: false
