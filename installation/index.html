@@ -71,9 +71,9 @@
     </li>
     <li class="toctree-l4"><a class="reference internal" href="#installing-from-source">Installing from source</a>
     </li>
-    <li class="toctree-l4"><a class="reference internal" href="#for-developers">For Developers</a>
-    </li>
         </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#for-developers">For Developers</a>
     </li>
         </ul>
     </li>
@@ -160,7 +160,7 @@
 <li><strong>Installing the RapidBrachyMCTPS standalone application.</strong></li>
 <li><strong>Running the RapidBrachy software as a custom module in 3D Slicer.</strong></li>
 </ol>
-<p>We recommend the <strong>Standalone Application</strong> for clinical users who want a streamlined, turnkey experience, and the <strong>Custom Slicer Module</strong> for researchers who want to integrate our tools with other 3D Slicer extensions. <strong>Please note that the Standalone Application is currently only available for Linux systems</strong>. </p>
+<p>We recommend the <strong>Standalone Application</strong> for users who want a streamlined, turnkey experience, and the <strong>Custom Slicer Module</strong> for users who want to take advantage of the full 3D Slicer ecosystem, including its extensive collection of extensions.</p>
 <table>
 <thead>
 <tr>
@@ -172,13 +172,13 @@
 <tbody>
 <tr>
 <td><strong>Best For</strong></td>
-<td>Clinicians, standard users</td>
-<td>Researchers, developers</td>
+<td>Streamlined, turnkey workflows</td>
+<td>Advanced workflows with the full 3D Slicer ecosystem</td>
 </tr>
 <tr>
 <td><strong>Setup</strong></td>
 <td>Download and run</td>
-<td>Requires 3D Slicer installation</td>
+<td>Requires 3D Slicer, brachyutils, and RapidBrachy installations</td>
 </tr>
 <tr>
 <td><strong>Interoperability</strong></td>
@@ -191,7 +191,7 @@
 <h3 id="standalone-application">Standalone Application</h3>
 <p>This version includes everything you need to run RapidBrachyMCTPS right out of the box.</p>
 <ol>
-<li>Download the latest release from the OneDrive.</li>
+<li>Download the latest release from the OneDrive (provided from engerlab).</li>
 <li>Extract the downloaded archive to your preferred directory.</li>
 <li>Run the <code>RapidBrachyMCTPS</code> executable file.</li>
 </ol>
@@ -235,8 +235,8 @@ pip_install(&quot;-e /Path/To/brachyutils&quot;)
 <pre><code class="language-sh">docker load -i Path/To/rapidbrachy_mc.tar
 </code></pre>
 <h4 id="installing-from-source">Installing from source</h4>
-<p>You will need permission from engerlab to clone the <a href="https://github.com/engerlab/RapidBrachyMC">RapidBrachyMC GitHub Repository</a> to install from source. Installation instructions are found in the README of the repository.</p>
-<h4 id="for-developers">For Developers</h4>
+<p>You will need permission from engerlab to clone the <a href="https://github.com/engerlab/RapidBrachyMC">RapidBrachyMC GitHub Repository</a> to install from source. Installation instructions are found in the README file of the repository.</p>
+<h3 id="for-developers">For Developers</h3>
 <p>If you are developing this module, enable Developer Mode in Slicer by navigating to <code>Edit</code> &gt; <code>Application</code> &gt; <code>Settings</code> &gt; <code>Developer</code> and clicking <code>Enable developer mode</code>.</p>
 <h2 id="dark-mode">Dark Mode</h2>
 <p>Dark mode is recommended, but it is up to personal preference. You can select the appearance mode by clicking <strong>Edit</strong> on the top left and navigating to <strong>Application Settings &gt; Appearance</strong>, under <strong>Style</strong>, select your preferred style.</p>
