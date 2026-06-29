@@ -28,6 +28,3 @@ Repeat steps 2 through 7 for each desired catheter. Once finished, navigate to t
 To remove catheters from the table, navigate to the **Catheter tab** in the RapidBrachy module. Under `Catheter Operations`, select the desired catheters and click `Remove`.
 
 **Note:** This action only clears the catheters from the table. If you want to permanently delete the catheter object from the scene, navigate to the Data module, find the object in the node list, right-click it, and select `Delete`.
-
-## Shielded Applicator
-ADD SHIELDED GUIDE

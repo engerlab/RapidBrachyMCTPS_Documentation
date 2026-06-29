@@ -8,6 +8,10 @@
 
 * **Architecture**: The software is built on the [Slicer Custom App Template (SlicerCAT)](https://www.kitware.com/slicercat-creating-custom-applications-based-on-3d-slicer/), a lightweight wrapper around the core [3D Slicer](https://www.slicer.org/) application. This architecture allows users to leverage Slicer’s native capabilities for tasks like image registration and contouring. It can also be deployed as a custom module directly inside 3D Slicer.
 
+### Disclaimer
+#### RapidBrachyMCTPS is research software. It is not represented as an approved, certified or commissioned clinical treatment-planning system or medical device. The software and associated documentation are provided without warranties concerning clinical performance, regulatory approval, treatment suitability, or fitness for patient care. Users are responsible for independently verifying calculations, results, data transformations, source models, applicator models, material assignments, dose distributions, optimization outputs, and exported files. Users are also responsible for determining whether their intended use complies with applicable institutional, ethical, professional, legal, and regulatory requirements. No treatment decision should be based on RapidBrachyMCTPS output without appropriate commissioning, independent verification, qualified professional review, institutional authorization, and compliance with applicable law.
+
+
 ## 3D Slicer
 * RapidBrachyMCTPS uses the 3D Slicer GUI as a frontend while utilizing built-in modules to perform supplementary tasks.
 * 3D Slicer is an open-source, extensible application for visualization and medical image analysis. You can learn more about the platform on the [official 3D Slicer website](https://www.slicer.org/).

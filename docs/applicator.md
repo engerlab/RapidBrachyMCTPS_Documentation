@@ -73,3 +73,6 @@ Below is a template for the applicator JSON file. Replace the placeholders value
 After loading, the applicator will appear in the viewing panels. You can adjust its location and orientation using the center dot and rotation wheel.
 
 Once properly positioned, click `Lock Applicator` to automatically populate the catheter table with the dwell positions. If you need to make further adjustments, click `Unlock Applicator`; note that this action will clear the current dwell positions from the table.
+
+## Shielded Applicator
+The shielded applicator feature is currently under development.

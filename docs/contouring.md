@@ -34,4 +34,4 @@ This tool is ideal for making small adjustments or manually drawing structures b
 This tool behaves identically to the Paint tool, but removes areas from the segment instead of adding them.
 
 ## Automatic Contouring
-3D Slicer has several options for AI auto-contouring, such as [MONAIAuto3DSeg](https://github.com/lassoan/SlicerMONAIAuto3DSeg), available in the official 3D Slicer app.
+Automatic contouring is currently available only in the RapidBrachyMCTPS 3D Slicer module and is not yet supported in the standalone application.. 3D Slicer has several options for AI auto-contouring, such as [MONAIAuto3DSeg](https://github.com/lassoan/SlicerMONAIAuto3DSeg), available in the official 3D Slicer app.

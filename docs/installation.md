@@ -6,19 +6,19 @@ There are two options when installing RapidBrachyMCTPS:
 1. **Installing the RapidBrachyMCTPS standalone application.**
 2. **Running the RapidBrachy software as a custom module in 3D Slicer.**
 
-We recommend the **Standalone Application** for clinical users who want a streamlined, turnkey experience, and the **Custom Slicer Module** for researchers who want to integrate our tools with other 3D Slicer extensions. **Please note that the Standalone Application is currently only available for Linux systems**. 
+We recommend the **Standalone Application** for users who want a streamlined, turnkey experience, and the **Custom Slicer Module** for users who want to take advantage of the full 3D Slicer ecosystem, including its extensive collection of extensions.
 
 | Feature | Standalone App | Custom Module (3D Slicer) |
 |---|---|---|
-| **Best For** | Clinicians, standard users | Researchers, developers |
-| **Setup** | Download and run | Requires 3D Slicer installation |
+| **Best For** | Streamlined, turnkey workflows | Advanced workflows with the full 3D Slicer ecosystem |
+| **Setup** | Download and run | Requires 3D Slicer, brachyutils, and RapidBrachy installations |
 | **Interoperability** | Isolated environment | Works alongside other Slicer extensions |
 
 ---
 ### Standalone Application
 This version includes everything you need to run RapidBrachyMCTPS right out of the box.
 
-1. Download the latest release from the OneDrive.
+1. Download the latest release from the OneDrive (provided from engerlab).
 2. Extract the downloaded archive to your preferred directory.
 3. Run the `RapidBrachyMCTPS` executable file.
 
@@ -81,9 +81,9 @@ docker load -i Path/To/rapidbrachy_mc.tar
 ```
 
 #### Installing from source
-You will need permission from engerlab to clone the [RapidBrachyMC GitHub Repository](https://github.com/engerlab/RapidBrachyMC) to install from source. Installation instructions are found in the README of the repository.
+You will need permission from engerlab to clone the [RapidBrachyMC GitHub Repository](https://github.com/engerlab/RapidBrachyMC) to install from source. Installation instructions are found in the README file of the repository.
 
-#### For Developers
+### For Developers
 If you are developing this module, enable Developer Mode in Slicer by navigating to `Edit` > `Application` > `Settings` > `Developer` and clicking `Enable developer mode`.
 
 ## Dark Mode

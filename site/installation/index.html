@@ -67,6 +67,10 @@
     </li>
     <li class="toctree-l3"><a class="reference internal" href="#installing-rapidbrachymc">Installing RapidBrachyMC</a>
         <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#using-docker-image-recommended">Using Docker Image (Recommended)</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#installing-from-source">Installing from source</a>
+    </li>
     <li class="toctree-l4"><a class="reference internal" href="#for-developers">For Developers</a>
     </li>
         </ul>
@@ -187,7 +191,7 @@
 <h3 id="standalone-application">Standalone Application</h3>
 <p>This version includes everything you need to run RapidBrachyMCTPS right out of the box.</p>
 <ol>
-<li>Download the latest release from the <a href="#">OneDrive</a>.</li>
+<li>Download the latest release from the OneDrive.</li>
 <li>Extract the downloaded archive to your preferred directory.</li>
 <li>Run the <code>RapidBrachyMCTPS</code> executable file.</li>
 </ol>
@@ -205,23 +209,33 @@ pip_install(&quot;-e /Path/To/brachyutils&quot;)
 </code></pre>
 <p>in the Python console to make sure the module is installed. You may get pydantic warnings, ignore them.</p>
 <h4 id="install-slicerrt">Install SlicerRT</h4>
-<p>Next, you'll need to install SlicerRT. Open 3D Slicer, click on <code>Extension Manager</code> <img src="img/extension_manager.png" width="25"> and type SlicerRT in the search bar. Install SlicerRT and restart 3D Slicer.</p>
+<p>Next, you'll need to install SlicerRT. Open 3D Slicer, click on <code>Extension Manager</code> <img alt="extension_manager" src="../img/extension_manager.png" width="25" /> and type SlicerRT in the search bar. Install SlicerRT and restart 3D Slicer.</p>
 <h4 id="install-rapidbrachygui">Install RapidBrachyGUI</h4>
 <p>Next, you'll need to install RapidBrachyGUI. Open 3D Slicer, click on <code>Edit</code>, then open <code>Application Settings</code>. On the left panel, click <code>Modules</code>, go to the <code>Additional module paths:</code> and add the path to RapidBrachyGUI. Then restart 3D Slicer.</p>
-<p><img src="img/edit.png" width="400"></p>
-<p><img src="img/modules.png" width="600"></p>
-<p><img src="img/add.png" width="600"></p>
-<p><img src="img/path.png" width="600"></p>
+<p><img alt="edit" src="../img/edit.png" width="400" /></p>
+<p><img alt="modules" src="../img/modules.png" width="600" /></p>
+<p><img alt="add" src="../img/add.png" width="600" /></p>
+<p><img alt="path" src="../img/path.png" width="600" /></p>
 <p>To access the RapidBrachy module, either search for it using the module search bar or select <code>Brachytherapy</code> from the module dropdown menu and choose RapidBrachy.</p>
 <p>For easier access, it is recommended to add RapidBrachy to your favorites toolbar. To do this, once again open <code>Edit</code>&gt;<code>Application Settings</code>&gt;<code>Modules</code>. This time, in the Modules list, scroll down to find RapidBrachy, then drag and drop it into the Favorite Modules list and click OK.</p>
 <p>RapidBrachy will now appear in the toolbar at the top of the screen, allowing you to access it quickly at any time.</p>
 <h3 id="installing-rapidbrachymc">Installing RapidBrachyMC</h3>
 <p>If you will want to run Monte Carlo simulations, you will need to install <a href="https://github.com/engerlab/RapidBrachyMC">RapidBrachyMC</a>, the Geant4-based Monte Carlo engine. You have two options when installing RapidBrachyMC:</p>
 <ol>
+<li>Installing the RapidBrachyMC Docker image.</li>
 <li>Installing RapidBrachyMC from source.</li>
-<li>Installing the RapidBrachyMC Docker image (<strong>recommended</strong>).</li>
 </ol>
-<p>Installation instructions for both options are outlined in the <a href="https://github.com/engerlab/RapidBrachyMC">RapidBrachyMC GitHub Repository</a>. If you choose to use the Docker Image, you will need to have <a href="https://docs.docker.com/engine/install/">Docker Engine</a> (Linux) or <a href="https://docs.docker.com/desktop/setup/install/windows-install/">Docker Desktop</a> (Windows) installed.</p>
+<h4 id="using-docker-image-recommended">Using Docker Image (Recommended)</h4>
+<p>Download the docker image (rapidbrachy_mc.tar) from the OneDrive and place it in your desired location. </p>
+<ul>
+<li>If you are using <strong>Linux</strong>, you will need to install <a href="https://docs.docker.com/engine/install/">Docker Engine</a>.</li>
+<li>If you are using <strong>Windows</strong>, you will need to install <a href="https://docs.docker.com/desktop/setup/install/windows-install/">Docker Desktop</a>. </li>
+</ul>
+<p>Then run this command in the Terminal/PowerShell:</p>
+<pre><code class="language-sh">docker load -i Path/To/rapidbrachy_mc.tar
+</code></pre>
+<h4 id="installing-from-source">Installing from source</h4>
+<p>You will need permission from engerlab to clone the <a href="https://github.com/engerlab/RapidBrachyMC">RapidBrachyMC GitHub Repository</a> to install from source. Installation instructions are found in the README of the repository.</p>
 <h4 id="for-developers">For Developers</h4>
 <p>If you are developing this module, enable Developer Mode in Slicer by navigating to <code>Edit</code> &gt; <code>Application</code> &gt; <code>Settings</code> &gt; <code>Developer</code> and clicking <code>Enable developer mode</code>.</p>
 <h2 id="dark-mode">Dark Mode</h2>

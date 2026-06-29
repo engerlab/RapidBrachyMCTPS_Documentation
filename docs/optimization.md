@@ -2,7 +2,7 @@
 
 After loading a dose file or running a calculation, you can optimize the dwell times from the **Optimization tab**.
 
-**Note**: you will need a [Gurobi license](https://www.gurobi.com/misc/lp/all/do-more-with-gurobi?utm_source=google&utm_medium=cpc&utm_campaign=2026+na+googleads+search+brand&utm_content=dmwg&gad_source=1&gad_campaignid=193283256&gclid=Cj0KCQjwxvjRBhC2ARIsAI7KJa20ReSoygu-4uWPg5zbqO6z4aqos3ofLlI185u73OgnVYaF59w3W8UaApdiEALw_wcB) to run optimization calculations. The **gurobi.lic** must be stored in your local home directory. 
+**Note**: You will need a [Gurobi license](https://www.gurobi.com/misc/lp/all/do-more-with-gurobi?utm_source=google&utm_medium=cpc&utm_campaign=2026+na+googleads+search+brand&utm_content=dmwg&gad_source=1&gad_campaignid=193283256&gclid=Cj0KCQjwxvjRBhC2ARIsAI7KJa20ReSoygu-4uWPg5zbqO6z4aqos3ofLlI185u73OgnVYaF59w3W8UaApdiEALw_wcB) to run optimization calculations. The **gurobi.lic** must be stored in your local home directory. 
 
 The Optimization Constraints table contains the parameters for your optimization equation. You can edit the parameters by double-clicking the cells:
 

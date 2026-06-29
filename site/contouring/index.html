@@ -139,27 +139,27 @@
               
                 <h1 id="contouring">Contouring</h1>
 <h2 id="manual-contouring">Manual Contouring</h2>
-<p>Manual contouring can be performed from the <strong>Segment Editor</strong> module <img src="img/segmentEditor.png" width="25">. The following steps describe the standard workflow for adding manual contours:</p>
+<p>Manual contouring can be performed from the <strong>Segment Editor</strong> module <img alt="segmentEditor" src="../img/segmentEditor.png" width="25" />. The following steps describe the standard workflow for adding manual contours:</p>
 <ol>
 <li>In the <code>Segmentation</code> drop-down menu, select the structure set you wish to add your contour to.</li>
 <li>In the <code>Source volume</code> menu, select the corresponding volume.</li>
 <li>Click the green <code>Add</code> button to add a new segment. Double-click this segment and rename it to the appropriate structure.</li>
 <li>
 <p>Ensure the newly added segment is highlighted in the list, then select your desired contouring tool (illustrated below).</p>
-<p><img src="img/tools.png" width="65"></p>
+<p><img alt="tools" src="../img/tools.png" width="65" /></p>
 <p>Depending on the structure you are contouring, choose one of the following tools:</p>
 </li>
 </ol>
-<h4 id="threshold-tool">Threshold Tool <img src="img/threshold.png" width="30"></h4>
+<h4 id="threshold-tool">Threshold Tool <img alt="threshold" src="../img/threshold.png" width="30" /></h4>
 <p>This tool is best suited for contouring structures with clear, distinct borders.</p>
-<p><img src="img/thresholdMenu.png" width="600"></p>
+<p><img alt="thresholdMenu" src="../img/thresholdMenu.png" width="600" /></p>
 <p>In the threshold menu, define the <code>Threshold Range</code>. The segment will automatically highlight any part of the volume that falls within this CT number range. Adjust the range until it accurately encloses the boundaries, then click <code>Apply</code>.</p>
 <p><strong>Important</strong>: Before applying, check the <code>Masking</code> section and ensure that <code>Modify other segments</code> is set to <strong>Allow overlap</strong>.</p>
-<h4 id="paint-tool">Paint Tool <img src="img/paint.png" width="30"></h4>
+<h4 id="paint-tool">Paint Tool <img alt="paint" src="../img/paint.png" width="30" /></h4>
 <p>This tool is ideal for making small adjustments or manually drawing structures by hand. You can change the brush size by adjusting the <code>Diameter</code>. To modify multiple slices simultaneously, select the <code>Sphere brush</code> option, or use the <code>Edit in 3D views</code> option to paint directly in the 3D viewing panel. Once finished, click Apply.</p>
 <p><strong>Important</strong>: Before applying, check the <code>Masking</code> section and ensure that <code>Modify other segments</code> is set to <strong>Allow overlap</strong>.</p>
-<p><img src="img/paintMenu.png" width="600"></p>
-<h4 id="erase-tool">Erase Tool <img src="img/erase.png" width="30"></h4>
+<p><img alt="paintMenu" src="../img/paintMenu.png" width="600" /></p>
+<h4 id="erase-tool">Erase Tool <img alt="erase" src="../img/erase.png" width="30" /></h4>
 <p>This tool behaves identically to the Paint tool, but removes areas from the segment instead of adding them.</p>
 <h2 id="automatic-contouring">Automatic Contouring</h2>
 <p>3D Slicer has several options for AI auto-contouring, such as <a href="https://github.com/lassoan/SlicerMONAIAuto3DSeg">MONAIAuto3DSeg</a>, available in the official 3D Slicer app.</p>
