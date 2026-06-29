@@ -15,3 +15,5 @@ You can scroll through image slices using the mouse wheel. To pan the image, cli
 
 ![loaded](img/loaded.png){ width="900" } 
 
+To inspect the individual nodes, navigate to **Data** in the module tab ![data](img/data.png){ width="25" }. For a detailed overview of the terminology and structure used in 3D Slicer and RapidBrachyMCTPS, refer to the [Slicer MRML Documentation](https://slicer.readthedocs.io/en/latest/developer_guide/mrml_overview.html).
+

@@ -18,7 +18,7 @@ We recommend the **Standalone Application** for users who want a streamlined, tu
 ### Standalone Application
 This version includes everything you need to run RapidBrachyMCTPS right out of the box.
 
-1. Download the latest release from the OneDrive (provided from engerlab).
+1. Download the latest release from the OneDrive (provided from Enger Lab).
 2. Extract the downloaded archive to your preferred directory.
 3. Run the `RapidBrachyMCTPS` executable file.
 

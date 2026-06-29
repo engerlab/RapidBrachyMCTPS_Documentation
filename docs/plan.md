@@ -11,4 +11,12 @@ The loaded data will now appear in the viewing panels, overlaid with a pink box 
 
 ![ROIBreastOnly](img/ROIBreastOnly.png){ width="600" }
 
+You can also automatically generate a ROI based on existing structures rather than defining it manually.
+
+1. Navigate to the **ROI tab** and use the `Conform to contours` drop-down menu to select the structures you want to include.
+2. Specify a margin (in mm) to define the buffer distance between your selected structures and the outer ROI boundary.
+3. Click `Update` and wait for the software to generate the new bounding volume.
+
+Instead of setting the ROI manually, you can systematically set the ROI by structure from the **ROI tab**. Select the desired structures to be included in the ROI from the `Conform to contours` drop-down menu. Then input a margin (in mm) indicating the buffer space between the structure and the border of the ROI. Click `Update` and wait for the ROI to update.
+
 To inspect the individual nodes, navigate to the **Data** in the module tab ![data](img/data.png){ width="25" }. For a detailed overview of the terminology and structure used in 3D Slicer and RapidBrachyMCTPS, refer to the [Slicer MRML Documentation](https://slicer.readthedocs.io/en/latest/developer_guide/mrml_overview.html).

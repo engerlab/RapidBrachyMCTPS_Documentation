@@ -142,9 +142,9 @@
 <h2 id="calculating-a-dose">Calculating a Dose</h2>
 <p>Before running a dose calculation, verify that you have completed your setup. Ensure you have:</p>
 <ul>
-<li>Configured all catheters and applicators (if applicable)</li>
-<li>Defined the brachytherapy source</li>
-<li>Initialized your phantom</li>
+<li>Configured all catheters and applicators (if applicable).</li>
+<li>Defined the brachytherapy source.</li>
+<li>Initialized your phantom.</li>
 </ul>
 <p>Enter the desired prescription dose in Grays. Select your desired algorithm for the dose calculation; RapidBrachyMCTPS is equipped with both the conventional TG-43 formalism and a Geant4-based Monte Carlo (MC) engine.</p>
 <h4 id="tg-43">TG-43</h4>
@@ -159,7 +159,7 @@
 <li>Enter the path to the RapidBrachyMC executable.<ul>
 <li>If you installed RapidBrachyMC from source, set the path to the executable named <code>RapidBrachyMC</code>.</li>
 <li>If you are using the RapidBrachyMC Docker image, the path should be automatically set to <strong>http://172.30.10.11:8000/calculate_dose_mc</strong><ul>
-<li><strong>Note</strong>: if you are using Windows and you are running Docker Desktop, you will need to manually change the path to <strong>http://127.0.0.1:8000/calculate_dose_mc</strong></li>
+<li><strong>Note</strong>: If you are using Windows and you are running Docker Desktop, you will need to manually change the path to <strong>http://127.0.0.1:8000/calculate_dose_mc</strong></li>
 </ul>
 </li>
 </ul>
@@ -169,7 +169,7 @@
 <li>Enter the number of threads (computer cores).</li>
 <li>Enter a random seed for the simulation.</li>
 <li>Click <code>Calculate Dose</code>.</li>
-<li>The dose will be loaded and the catheter table will be populated. The catheter table dwell times can be manually modified.</li>
+<li>The dose will be loaded and the catheter table will be populated. The catheter table dwell times can be manually modified. <strong>Note</strong>: Simulation time depends on several factors, including the number of histories, the size of the ROI, and your computer's performance. As a result, the simulation may take a considerable amount of time to complete.</li>
 </ol>
               
             </div>

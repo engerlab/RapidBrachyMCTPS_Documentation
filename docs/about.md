@@ -31,6 +31,20 @@ If you use RapidBrachyMCTPS for research, please cite the following in your publ
 6. Kalinowski J, Jafarzadeh H, Farahnak F, Enger SA. RapidBrachyMCTPS 3.0: recent updates and validation of RapidBrachyMCTPS, a Monte Carlo-based brachytherapy treatment planning system. Phys Med Biol. 2026;71(12):12NT02. doi:10.1088/1361-6560/ae72e9
 
 ## Acknowledgement
+RapidBrachyMCTPS is made possible through the continuous collaborative efforts of the research team at the Enger Lab, affiliated with the Medical Physics Unit at McGill University and the Lady Davis Institute for Medical Research. The following sections give credit to some of the major contributors to the RapidBrachyMCTPS core effort.
+
+### Major Contributors
+* Jonathan Kalinowski
+* Hossein Jafarzadeh
+* Remi Walhain
+* Shirin A. Enger
+
+### Groups Contributing to RapidBrachyMCTPS's Core Engineering
+* 3D Slicer
+* Kitware
+* Geant4
+
+### Funding Sources
 
 ## Contact us
-
+Any questions can be forwarded to 
