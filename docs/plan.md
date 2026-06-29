@@ -11,6 +11,7 @@ The loaded data will now appear in the viewing panels, overlaid with a pink box 
 
 ![ROIBreastOnly](img/ROIBreastOnly.png){ width="600" }
 
+### ROI by Contour
 You can also automatically generate a ROI based on existing structures rather than defining it manually.
 
 1. Navigate to the **ROI tab** and use the `Conform to contours` drop-down menu to select the structures you want to include.
