@@ -15,7 +15,7 @@ Before running a dose calculation, verify that you have completed your setup. En
 Enter the desired prescription dose in Grays. Select your desired algorithm for the dose calculation; RapidBrachyMCTPS is equipped with both the conventional TG-43 formalism and a Geant4-based Monte Carlo (MC) engine.
 
 #### TG-43
-1. Enter the path to the TG-43 parameter data, it should have a default path.
+1. Enter the path to the TG-43 parameter data so that it matches the chosen source, it should have a default path. If the parameter data path does not match the chosen source, navigate one directory up to `TG43_Parameter_Data` and select the correct path.
 2. Click `Calculate Dose`.
 3. The dose will be loaded and the catheter table will be populated. The catheter table dwell times can be manually modified.
 
@@ -30,5 +30,9 @@ To perform Monte Carlo simulations, you will need to have installed RapidBrachyM
 3. Enter the desired number of histories. This refers to the number of simulation trials.
 4. Enter the number of threads (computer cores).
 5. Enter a random seed for the simulation.
-6. Click `Calculate Dose`.
-7. The dose will be loaded and the catheter table will be populated. The catheter table dwell times can be manually modified. **Note**: Simulation time depends on several factors, including the number of histories, the size of the ROI, and your computer's performance. As a result, the simulation may take a considerable amount of time to complete.
+6. If you want to calculate the dose for each individual dwell position, select `Prepare for Optimization`. Otherwise, only the combined dose is computed.
+7. Click `Calculate Dose`.
+8. The dose will be loaded and the catheter table will be populated. The catheter table dwell times can be manually modified. **Note**: Simulation time depends on several factors, including the number of histories, the size of the ROI, and your computer's performance. As a result, the simulation may take a considerable amount of time to complete.
+
+## Isodode Lines
+You can customize the isodose lines in the Isodose Levels table by adding or removing levels and modifying their colour scheme.

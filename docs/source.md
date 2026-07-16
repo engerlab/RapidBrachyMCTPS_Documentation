@@ -5,7 +5,7 @@ To choose a source, navigate to the **Source tab** in the RapidBrachy module. Yo
 ### Database of Source Characteristics
 The table below details the air-kerma strength and air-kerma per history for various brachytherapy sources and isotopes, as calculated by RapidBrachyTG43. Note that any digit enclosed in parentheses represents the absolute uncertainty in the final digit of the value.
 
-| Source Name | Isotope | Air-kerma strength per 10 Curie [U/10 Ci] | Air-kerma strength per unit activity [10<sup>-8</sup> U/Bq] |Air-kerma per history strength |
+| Source Name | Isotope | Air-kerma strength per 10 Curie [U/10 Ci] | Air-kerma strength per unit activity [10<sup>-8</sup> U/Bq] |Air-kerma per history strength [10<sup>-11</sup> U/history] |
 |---|---|---|---|---|
 | **SelectSeed** | I-125 | 7666.4 | 2.072(4) | TODO |
 | **microSelectron-v2** | Ir-192 | 35827.1 | 9.683(6) | 1.161(9) |

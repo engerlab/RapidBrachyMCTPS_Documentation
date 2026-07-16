@@ -39,7 +39,7 @@ RapidBrachyMCTPS is made possible through the continuous collaborative efforts o
 * Remi Walhain
 * Shirin A. Enger
 
-### Groups Contributing to RapidBrachyMCTPS's Core Engineering
+### Major Software Dependencies
 * 3D Slicer
 * Kitware
 * Geant4

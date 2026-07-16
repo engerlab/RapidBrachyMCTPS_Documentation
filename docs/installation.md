@@ -18,7 +18,7 @@ We recommend the **Standalone Application** for users who want a streamlined, tu
 ### Standalone Application
 This version includes everything you need to run RapidBrachyMCTPS right out of the box.
 
-1. Download the latest release from the OneDrive (provided from Enger Lab).
+1. Download the latest release from the OneDrive (provided by Enger Lab).
 2. Extract the downloaded archive to your preferred directory.
 3. Run the `RapidBrachyMCTPS` executable file.
 
@@ -46,7 +46,7 @@ in the Python console to make sure the module is installed. You may get pydantic
 Next, you'll need to install SlicerRT. Open 3D Slicer, click on `Extension Manager` ![extension_manager](img/extension_manager.png){ width="25" } and type SlicerRT in the search bar. Install SlicerRT and restart 3D Slicer.
 
 #### Install RapidBrachyGUI
-Next, you'll need to install RapidBrachyGUI. Open 3D Slicer, click on `Edit`, then open `Application Settings`. On the left panel, click `Modules`, go to the `Additional module paths:` and add the path to RapidBrachyGUI. Then restart 3D Slicer.
+Next, you'll need to install RapidBrachyGUI. Open 3D Slicer, click on `Edit`, then open `Application Settings`. On the left panel, click `Modules`, go to the `Additional module paths:` and add the path to `RapidBrachyGUI/RapidBrachy`. Then restart 3D Slicer.
 
 ![edit](img/edit.png){ width="400" }
 

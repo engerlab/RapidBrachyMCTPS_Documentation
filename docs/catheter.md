@@ -23,8 +23,18 @@ If not, the **Catheter tab** in the RapidBrachy Module allows you to create or r
 
 Repeat steps 2 through 7 for each desired catheter. Once finished, navigate to the **Catheter tab** in the RapidBrachy module. Under `Add new catheter`, input the desired dwell position step size (in mm). Use the `Select Markups Curve` drop-down menu to select your newly created catheters one at a time, clicking `Add` for each. The catheter table will automatically populate based on the drawn curves and your chosen step size, assigning a default dwell time of 1 second to each position.
 
-## Removing Catheters
+## Additional Catheters Options
+Navigate to the **Catheter tab** in the RapidBrachy module. The following operations can be accessed under `Catheter Operations`.
 
-To remove catheters from the table, navigate to the **Catheter tab** in the RapidBrachy module. Under `Catheter Operations`, select the desired catheters and click `Remove`.
+![Catheter_tab](img/catheter_tab.png){ width="500" }
+
+### Removing Catheters
+Select the desired catheters from the drop-down menu and click `Remove`.
 
 **Note:** This action only clears the catheters from the table. If you want to permanently delete the catheter object from the scene, navigate to the Data module, find the object in the node list, right-click it, and select `Delete`.
+
+### Locking Catheter Dwell Times
+Select the desired catheters and click `Lock`. This prevents modifications to the selected catheters and their attributes, including changes to dwell times during optimization.
+
+### Make Shielded
+The shielding feature is described in the [Shielded Applicator section](applicator.md#shielded-applicator).

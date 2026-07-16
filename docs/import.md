@@ -4,7 +4,7 @@ You can import DICOM files by clicking `File` then `Add DICOM Data` or by clicki
 
 ![dicom](img/dicom.png){ width="300" }
 
-This opens the DICOM Module, where you can import DICOM files and access your DICOM database. Click `Import DICOM files`, select your files, and import them into the database. The database maintains a cached list of patients that can then be loaded into the visualizer.
+This opens the **DICOM Module**, where you can import DICOM files and access your DICOM database. Click `Import DICOM files`, select your files, and import them into the database. The database maintains a cached list of patients that can then be loaded into the visualizer.
 
 ![import_dicom](img/import_dicom.png){ width="900" }
 

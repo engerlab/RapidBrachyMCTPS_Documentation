@@ -75,4 +75,10 @@ After loading, the applicator will appear in the viewing panels. You can adjust 
 Once properly positioned, click `Lock Applicator` to automatically populate the catheter table with the dwell positions. If you need to make further adjustments, click `Unlock Applicator`; note that this action will clear the current dwell positions from the table.
 
 ## Shielded Applicator
-The shielded applicator feature is currently under development.
+### To make the applicator shielded for Intensity Modulated BrachyTherapy (IMBT)
+
+1. Navigate to RapidBrachy module's **Catheter tab**. Under `Catheter Operations`, select the catheter(s) that should be shielded. 
+2. Select the starting angle (with respect to the applicator's current placement), the stopping angle, and the step size in degrees.
+3. Click `Make Shielded`. This will populate your catheter table with dwell positions for each individual angle.
+
+**Note: If you are running TG-43 simulations, use the TG-43S algorithm instead of the standard TG-43.**
