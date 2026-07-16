@@ -65,7 +65,15 @@
     <ul class="current">
     <li class="toctree-l2"><a class="reference internal" href="#adding-catheters">Adding Catheters</a>
     </li>
-    <li class="toctree-l2"><a class="reference internal" href="#removing-catheters">Removing Catheters</a>
+    <li class="toctree-l2"><a class="reference internal" href="#additional-catheters-options">Additional Catheters Options</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#removing-catheters">Removing Catheters</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#locking-catheter-dwell-times">Locking Catheter Dwell Times</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#make-shielded">Make Shielded</a>
+    </li>
+        </ul>
     </li>
     </ul>
                 </li>
@@ -154,9 +162,16 @@
 <li>Double left-click to place the final point and complete the curve.</li>
 </ol>
 <p>Repeat steps 2 through 7 for each desired catheter. Once finished, navigate to the <strong>Catheter tab</strong> in the RapidBrachy module. Under <code>Add new catheter</code>, input the desired dwell position step size (in mm). Use the <code>Select Markups Curve</code> drop-down menu to select your newly created catheters one at a time, clicking <code>Add</code> for each. The catheter table will automatically populate based on the drawn curves and your chosen step size, assigning a default dwell time of 1 second to each position.</p>
-<h2 id="removing-catheters">Removing Catheters</h2>
-<p>To remove catheters from the table, navigate to the <strong>Catheter tab</strong> in the RapidBrachy module. Under <code>Catheter Operations</code>, select the desired catheters and click <code>Remove</code>.</p>
+<h2 id="additional-catheters-options">Additional Catheters Options</h2>
+<p>Navigate to the <strong>Catheter tab</strong> in the RapidBrachy module. The following operations can be accessed under <code>Catheter Operations</code>.</p>
+<p><img alt="Catheter_tab" src="../img/catheter_tab.png" width="500" /></p>
+<h3 id="removing-catheters">Removing Catheters</h3>
+<p>Select the desired catheters from the drop-down menu and click <code>Remove</code>.</p>
 <p><strong>Note:</strong> This action only clears the catheters from the table. If you want to permanently delete the catheter object from the scene, navigate to the Data module, find the object in the node list, right-click it, and select <code>Delete</code>.</p>
+<h3 id="locking-catheter-dwell-times">Locking Catheter Dwell Times</h3>
+<p>Select the desired catheters and click <code>Lock</code>. This prevents modifications to the selected catheters and their attributes, including changes to dwell times during optimization.</p>
+<h3 id="make-shielded">Make Shielded</h3>
+<p>The shielding feature is described in the <a href="../applicator/#shielded-applicator">Shielded Applicator section</a>.</p>
               
             </div>
           </div><footer>

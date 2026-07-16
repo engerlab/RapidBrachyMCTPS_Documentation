@@ -59,6 +59,12 @@
               <ul class="current">
                 <li class="toctree-l1 current"><a class="reference internal current" href="#">Initializing a Plan</a>
     <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#create-a-new-plan">Create a new plan</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#import-an-existing-plan">Import an existing plan</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#setting-a-roi">Setting a ROI</a>
+    </li>
     <li class="toctree-l2"><a class="reference internal" href="#roi-by-contour">ROI by Contour</a>
     </li>
     </ul>
@@ -130,8 +136,17 @@
                 <h1 id="initializing-a-plan">Initializing a Plan</h1>
 <p>To initialize a plan, open the <strong>RapidBrachy Module</strong> <img alt="rapidbrachyModule" src="../img/rapidbrachyModule.png" width="25" />. In the standalone application, it is available in the top module tab by default. Otherwise, you can find it in the module dropdown under <code>Brachytherapy</code> &gt; <code>RapidBrachy</code>, or use the <code>Find Module</code> button and search for "RapidBrachy" if you are using RapidBrachyMCTPS as a 3D Slicer custom module.</p>
 <p><img alt="rapidbrachy" src="../img/rapidbrachy.png" width="900" /></p>
-<p>Once in the <strong>RapidBrachy Module</strong>, open the <strong>Import tab</strong>. Select an <code>Image Volume</code> (CT, MRI, or US Image) and <code>Structure set</code>, and optionally an <code>RT plan</code> or <code>Dose volume</code>. Then click <code>Initialize Plan</code>.</p>
-<p>The loaded data will now appear in the viewing panels, overlaid with a pink box representing the Region of Interest (ROI). Adjust this box along all three orthogonal axes to include only the anatomy you want evaluated during dose calculations. Keep in mind that the smaller the ROI, the faster the MC and TG-43 simulations will run.</p>
+<p>Once in the <strong>RapidBrachy Module</strong>, open the <strong>Import tab</strong>. Here, you have two options:</p>
+<ol>
+<li>Create a new plan.</li>
+<li>Import an existing plan.</li>
+</ol>
+<h3 id="create-a-new-plan">Create a new plan</h3>
+<p>To create a new plan, you must already have loaded DICOM data from the <strong>DICOM Module</strong>, see <a href="../import/#loading-dicom-data">instructions under Data Loading and Viewing</a>. Select an <code>Image Volume</code> (CT, MRI, or US Image) and <code>Structure set</code>, and optionally an <code>RT plan</code> or <code>Dose volume</code>. Then click <code>Initialize Plan</code>.</p>
+<h3 id="import-an-existing-plan">Import an existing plan</h3>
+<p>To import an existing plan, it must be a plan that has already been exported by RapidBrachyMCTPS from the <strong>Export tab</strong>, using the RapidBrachyGUI preset.</p>
+<h3 id="setting-a-roi">Setting a ROI</h3>
+<p>Once a plan is created/loaded, the data will appear in the viewing panels, overlaid with a pink box representing the Region of Interest (ROI). Adjust this box along all three orthogonal axes to include only the anatomy you want evaluated during dose calculations. Keep in mind that the smaller the ROI, the faster the MC and TG-43 simulations will run.</p>
 <p><img alt="ROI" src="../img/ROI.png" width="900" /></p>
 <p><img alt="ROIBreastOnly" src="../img/ROIBreastOnly.png" width="600" /></p>
 <h3 id="roi-by-contour">ROI by Contour</h3>

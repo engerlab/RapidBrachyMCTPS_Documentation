@@ -76,6 +76,10 @@
     <li class="toctree-l2"><a class="reference internal" href="#placing-applicator">Placing Applicator</a>
     </li>
     <li class="toctree-l2"><a class="reference internal" href="#shielded-applicator">Shielded Applicator</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#to-make-the-applicator-shielded-for-intensity-modulated-brachytherapy-imbt">To make the applicator shielded for Intensity Modulated BrachyTherapy (IMBT)</a>
+    </li>
+        </ul>
     </li>
     </ul>
                 </li>
@@ -204,7 +208,13 @@
 <p>After loading, the applicator will appear in the viewing panels. You can adjust its location and orientation using the center dot and rotation wheel.</p>
 <p>Once properly positioned, click <code>Lock Applicator</code> to automatically populate the catheter table with the dwell positions. If you need to make further adjustments, click <code>Unlock Applicator</code>; note that this action will clear the current dwell positions from the table.</p>
 <h2 id="shielded-applicator">Shielded Applicator</h2>
-<p>The shielded applicator feature is currently under development.</p>
+<h3 id="to-make-the-applicator-shielded-for-intensity-modulated-brachytherapy-imbt">To make the applicator shielded for Intensity Modulated BrachyTherapy (IMBT)</h3>
+<ol>
+<li>Navigate to RapidBrachy module's <strong>Catheter tab</strong>. Under <code>Catheter Operations</code>, select the catheter(s) that should be shielded. </li>
+<li>Select the starting angle (with respect to the applicator's current placement), the stopping angle, and the step size in degrees.</li>
+<li>Click <code>Make Shielded</code>. This will populate your catheter table with dwell positions for each individual angle.</li>
+</ol>
+<p><strong>Note: If you are running TG-43 simulations, use the TG-43S algorithm instead of the standard TG-43.</strong></p>
               
             </div>
           </div><footer>
