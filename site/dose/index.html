@@ -97,6 +97,8 @@
     </li>
         </ul>
     </li>
+    <li class="toctree-l2"><a class="reference internal" href="#isodode-lines">Isodode Lines</a>
+    </li>
     </ul>
                 </li>
               </ul>
@@ -149,7 +151,7 @@
 <p>Enter the desired prescription dose in Grays. Select your desired algorithm for the dose calculation; RapidBrachyMCTPS is equipped with both the conventional TG-43 formalism and a Geant4-based Monte Carlo (MC) engine.</p>
 <h4 id="tg-43">TG-43</h4>
 <ol>
-<li>Enter the path to the TG-43 parameter data, it should have a default path.</li>
+<li>Enter the path to the TG-43 parameter data so that it matches the chosen source, it should have a default path. If the parameter data path does not match the chosen source, navigate one directory up to <code>TG43_Parameter_Data</code> and select the correct path.</li>
 <li>Click <code>Calculate Dose</code>.</li>
 <li>The dose will be loaded and the catheter table will be populated. The catheter table dwell times can be manually modified.</li>
 </ol>
@@ -168,9 +170,12 @@
 <li>Enter the desired number of histories. This refers to the number of simulation trials.</li>
 <li>Enter the number of threads (computer cores).</li>
 <li>Enter a random seed for the simulation.</li>
+<li>If you want to calculate the dose for each individual dwell position, select <code>Prepare for Optimization</code>. Otherwise, only the combined dose is computed.</li>
 <li>Click <code>Calculate Dose</code>.</li>
 <li>The dose will be loaded and the catheter table will be populated. The catheter table dwell times can be manually modified. <strong>Note</strong>: Simulation time depends on several factors, including the number of histories, the size of the ROI, and your computer's performance. As a result, the simulation may take a considerable amount of time to complete.</li>
 </ol>
+<h2 id="isodode-lines">Isodode Lines</h2>
+<p>You can customize the isodose lines in the Isodose Levels table by adding or removing levels and modifying their colour scheme.</p>
               
             </div>
           </div><footer>
