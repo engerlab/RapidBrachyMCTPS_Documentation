@@ -1,4 +1,4 @@
-# About RapidBrachyMCTPS ![Logo](img/Logo.png)
+# About RapidBrachyMCTPS ![Logo](img/Logo.png){ width="150" }
 
 ## What is RapidBrachyMCTPS?
 

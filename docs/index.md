@@ -1,4 +1,4 @@
-# Welcome to the RapidBrachyMCTPS User Guide ![Logo](img/Logo.png)
+# Welcome to the RapidBrachyMCTPS User Guide ![Logo](img/Logo.png){ width="150" }
 
 ### This guide will cover the following categories
 
