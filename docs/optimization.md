@@ -19,6 +19,8 @@ The Optimization Constraints table contains the parameters for your optimization
 4. **Assign Weights**: Enter the penalty weights for each structure.
 5. **Run**: Click Optimize.
 
+**Note**: Optimization with a Monte Carlo dose calculation requires that the MC simulation be performed for every dwell position [see step 6 of the MC dose calculation](dose.md#dose).
+
 Once the optimization finishes, review your results in the **DVH tab**. If the results need refinement, adjust your weights and run the optimization again. The calculated dwell times will automatically update in the catheter table.
 
 ### Graphical Optimization
