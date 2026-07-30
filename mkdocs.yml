@@ -15,6 +15,7 @@ nav:
   - Optimizing Dwell Times: optimization.md
   - DVH Metrics: dvh.md
   - Data Saving: export.md
+  - Nuclear Medicine: nm.md
 theme: readthedocs
 extra_css:
   - css/custom.css
