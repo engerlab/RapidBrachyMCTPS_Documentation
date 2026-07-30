@@ -103,6 +103,20 @@
               <ul class="current">
                 <li class="toctree-l1 current"><a class="reference internal current" href="#">Nuclear Medicine</a>
     <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#import-tab">Import Tab</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#phantom-tab">Phantom Tab</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#dose-tab">Dose Tab</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#ldm">LDM</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#vsv">VSV</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#export-tab">Export Tab</a>
+    </li>
     </ul>
                 </li>
               </ul>
@@ -130,7 +144,51 @@
             <div class="section" itemprop="articleBody">
               
                 <h1 id="nuclear-medicine">Nuclear Medicine</h1>
-<p>The RapidBrachyMCTPS standalone app also comes equipped a nuclear medicine module called RapidTheraDose. </p>
+<p>The RapidBrachyMCTPS standalone app also comes equipped a nuclear medicine module called RapidTheraDose. To access the module, click the <strong>RapidTheraDose Module</strong> <img alt="Logo" src="../img/Logo.png" width="25" />. In the standalone application, it is available in the top module tab by default. Otherwise, you can find it in the module dropdown under <code>Nuclear Medicine</code> &gt; <code>RapidTheraDose</code>, or use the <code>Find Module</code> button and search for "RapidTheraDose" if you are using RapidBrachyMCTPS as a 3D Slicer custom module.</p>
+<h2 id="import-tab">Import Tab</h2>
+<p>Once in the <strong>RapidTheraDose Module</strong>, open the <strong>Import tab</strong>. Here, you can load the required images, structures, and dose files for your plan. <strong>Note</strong>: Your DICOM files must already have be loaded into the Slicer scene before initializing a plan; see the <a href="../import/#loading-and-viewing-data">loading DICOM data section</a>.</p>
+<p>Once the DICOM files are loaded into the scene, select an <code>Image Volume</code> (CT, MRI, or US Image), <code>Structure set</code> (contours), and optionally a <code>SPECT/PET Volume</code> or <code>Dose volume</code>. Then click <code>Initialize Plan</code>, this will enable all other tabs.</p>
+<h2 id="phantom-tab">Phantom Tab</h2>
+<p>The Phantom tab allows you to generate a phantom object, assign materials and densities to contoured structures, and define the phantom resolution. Creating a phantom is required before performing dose calculations or generating EGSphant and <code>.mac</code> files.</p>
+<p>The typical workflow for creating a phantom is:</p>
+<ol>
+<li><strong>Upload a materials table</strong>. The materials table is a plain-text (.txt) file with the same format described in the <a href="../phantom/#assigning-material-and-density">Assigning Material and Density section</a>. The <code>Hounsfield_Unit</code> column is not used during in this module, but each row must contain a placeholder numeric value (integer or floating-point) in that column. These values must increase monotonically from top to bottom.</li>
+<li><strong>Assign materials to contour structures</strong>. In the Material column, select the desired material for each structure. The corresponding density is automatically populated from the materials table but can be adjusted manually if needed.</li>
+<li><strong>Set the phantom resolution</strong>. Specify the voxel resolution in the X, Y, and Z directions.</li>
+<li><strong>Click Initialize Phantom</strong>.</li>
+</ol>
+<h2 id="dose-tab">Dose Tab</h2>
+<p>There are two options for dose calculations:</p>
+<ol>
+<li><strong>LDM</strong> (Local Deposition Method).</li>
+<li><strong>VSV</strong> (Voxel S-Value).</li>
+</ol>
+<h3 id="ldm">LDM</h3>
+<p>Input the appropriate source metrics and click <code>Calculate LDM Dose</code>.</p>
+<h3 id="vsv">VSV</h3>
+<p>TBD</p>
+<h2 id="export-tab">Export Tab</h2>
+<p>The export tab allows you to output the following files:</p>
+<ul>
+<li><strong>EGSphant</strong>: A <code>.egsphant</code> file for the phantom generated in the <strong>Phantom tab</strong>.<ul>
+<li>You must enter a name for the <code>.egsphant</code> file. The default is <code>phantom</code>.</li>
+</ul>
+</li>
+<li><strong>CT Plan</strong>: A <code>.plan</code> file with uniform activity from a CT contour.<ul>
+<li>You must select an organ/contour to use.</li>
+</ul>
+</li>
+<li><strong>NM Plan</strong>: A <code>.plan</code> file from a nuclear medicine image (PET or SPECT).<ul>
+<li>You must enter a threshold value: the percentile threshold for selecting hottest voxels.</li>
+</ul>
+</li>
+<li><strong>MAC File</strong>: A <code>.mac</code> file required to run a Monte Carlo simulation. <strong>Note</strong>: An EGSphant file is also required for Monte Carlo simulations.<ul>
+<li>You must enter the number of computer threads to use during the simulation, the number of histories (number of events/particles to simulate), the atomic mass, and the atomic number.</li>
+</ul>
+</li>
+<li><strong>Dose File</strong>: A <code>.nrrd</code> dose file for each contour structure as well as the whole image.</li>
+<li><strong>Metrics JSON File</strong>: A <code>.json</code> file containing a summary of the files exported.</li>
+</ul>
               
             </div>
           </div><footer>
