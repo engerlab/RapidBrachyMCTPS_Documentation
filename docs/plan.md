@@ -1,5 +1,5 @@
 # Initializing a Plan
-To initialize a plan, open the **RapidBrachy Module** ![rapidbrachyModule](img/rapidbrachyModule.png){ width="25" }. In the standalone application, it is available in the top module tab by default. Otherwise, you can find it in the module dropdown under `Brachytherapy` > `RapidBrachy`, or use the `Find Module` button and search for "RapidBrachy" if you are using RapidBrachyMCTPS as a 3D Slicer custom module.
+To initialize a plan, open the **RapidBrachy Module** ![Logo](img/Logo.png){ width="25" }. In the standalone application, it is available in the top module tab by default. Otherwise, you can find it in the module dropdown under `Brachytherapy` > `RapidBrachy`, or use the `Find Module` button and search for "RapidBrachy" if you are using RapidBrachyMCTPS as a 3D Slicer custom module.
 
 ![rapidbrachy](img/rapidbrachy.png){ width="900" }
 
