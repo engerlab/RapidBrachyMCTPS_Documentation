@@ -83,6 +83,15 @@ docker load -i Path/To/rapidbrachy_mc.tar
 #### Installing from source
 You will need permission from engerlab to clone the [RapidBrachyMC GitHub Repository](https://github.com/engerlab/RapidBrachyMC) to install from source. Installation instructions are found in the README file of the repository.
 
+### Installing RapidTheraDose
+If you will want to use the nuclear medicine module RapidTheraDose, you'll need to clone the [RapidTheraDoseGUI repository](https://github.com/engerlab/RapidTheraDoseGUI). Then, repeat the instructions for [installing RapidBrachyGUI](#install-rapidbrachygui), but instead of adding the path to `RapidBrachyGUI/RapidBrachy`, add the path to `RapidTheraDoseGUI/RapidTheraDose`.
+
+To access the RapidTheraDose module, either search for it using the module search bar or select `Nuclear Medicine` from the module dropdown menu and choose RapidTheraDose.
+
+For easier access, it is recommended to add RapidTheraDose to your favorites toolbar. To do this, once again open `Edit`>`Application Settings`>`Modules`. This time, in the Modules list, scroll down to find RapidTheraDose, then drag and drop it into the Favorite Modules list and click OK.
+
+RapidTheraDose will now appear in the toolbar at the top of the screen, allowing you to access it quickly at any time.
+
 ### For Developers
 If you are developing this module, enable Developer Mode in Slicer by navigating to `Edit` > `Application` > `Settings` > `Developer` and clicking `Enable developer mode`.
 
