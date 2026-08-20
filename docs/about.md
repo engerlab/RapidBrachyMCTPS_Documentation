@@ -47,4 +47,4 @@ RapidBrachyMCTPS is made possible through the continuous collaborative efforts o
 ### Funding Sources
 
 ## Contact us
-Any questions can be forwarded to 
+Any questions can be directed to our application support contact at **remi.walhain@mail.mcgill.ca**.

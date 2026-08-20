@@ -25,7 +25,7 @@ To perform Monte Carlo simulations, you will need to have installed RapidBrachyM
 1. Enter the path to the RapidBrachyMC executable.
     - If you installed RapidBrachyMC from source, set the path to the executable named `RapidBrachyMC`.
     - If you are using the RapidBrachyMC Docker image, the path should be automatically set to **http://172.30.10.11:8000/calculate_dose_mc**
-        - **Note**: If you are using Windows and you are running Docker Desktop, you will need to manually change the path to **http://127.0.0.1:8000/calculate_dose_mc**
+        - <span style="color:red">**Note**: If you are using **Windows**, you must first run Docker Desktop and manually change the path to **http://127.0.0.1:8000/calculate_dose_mc** before running the calculation.</span>
 2. Enter the path to the desired output directory.
 3. Enter the desired number of histories. This refers to the number of simulation trials.
 4. Enter the number of threads (computer cores).

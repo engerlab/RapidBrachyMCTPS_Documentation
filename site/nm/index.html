@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       <link rel="shortcut icon" href="../img/favicon.ico" />
-    <title>Optimizing Dwell Times - RapidBrachyMCTPS</title>
+    <title>Nuclear Medicine - RapidBrachyMCTPS</title>
     <link rel="stylesheet" href="../css/theme.css" />
     <link rel="stylesheet" href="../css/theme_extra.css" />
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
@@ -13,8 +13,8 @@
     
       <script>
         // Current page data
-        var mkdocs_page_name = "Optimizing Dwell Times";
-        var mkdocs_page_input_path = "optimization.md";
+        var mkdocs_page_name = "Nuclear Medicine";
+        var mkdocs_page_input_path = "nm.md";
         var mkdocs_page_url = null;
       </script>
     
@@ -88,14 +88,8 @@
                 <li class="toctree-l1"><a class="reference internal" href="../dose/">Dose</a>
                 </li>
               </ul>
-              <ul class="current">
-                <li class="toctree-l1 current"><a class="reference internal current" href="#">Optimizing Dwell Times</a>
-    <ul class="current">
-    <li class="toctree-l2"><a class="reference internal" href="#standard-optimization-pipeline">Standard Optimization Pipeline</a>
-    </li>
-    <li class="toctree-l2"><a class="reference internal" href="#graphical-optimization">Graphical Optimization</a>
-    </li>
-    </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../optimization/">Optimizing Dwell Times</a>
                 </li>
               </ul>
               <ul>
@@ -106,8 +100,24 @@
                 <li class="toctree-l1"><a class="reference internal" href="../export/">Data Saving</a>
                 </li>
               </ul>
-              <ul>
-                <li class="toctree-l1"><a class="reference internal" href="../nm/">Nuclear Medicine</a>
+              <ul class="current">
+                <li class="toctree-l1 current"><a class="reference internal current" href="#">Nuclear Medicine</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#import-tab">Import Tab</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#phantom-tab">Phantom Tab</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#dose-tab">Dose Tab</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#ldm">LDM</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#vsv">VSV</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#export-tab">Export Tab</a>
+    </li>
+    </ul>
                 </li>
               </ul>
       </div>
@@ -124,7 +134,7 @@
         <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
   <ul class="wy-breadcrumbs">
     <li><a href=".." class="icon icon-home" aria-label="Docs"></a></li>
-      <li class="breadcrumb-item active">Optimizing Dwell Times</li>
+      <li class="breadcrumb-item active">Nuclear Medicine</li>
     <li class="wy-breadcrumbs-aside">
     </li>
   </ul>
@@ -133,34 +143,57 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
             <div class="section" itemprop="articleBody">
               
-                <h1 id="optimizing-dwell-times">Optimizing Dwell Times</h1>
-<p>After loading a dose file or running a calculation, you can optimize the dwell times from the <strong>Optimization tab</strong>.</p>
-<p><strong>Note</strong>: You will need a <a href="https://www.gurobi.com/misc/lp/all/do-more-with-gurobi?utm_source=google&amp;utm_medium=cpc&amp;utm_campaign=2026+na+googleads+search+brand&amp;utm_content=dmwg&amp;gad_source=1&amp;gad_campaignid=193283256&amp;gclid=Cj0KCQjwxvjRBhC2ARIsAI7KJa20ReSoygu-4uWPg5zbqO6z4aqos3ofLlI185u73OgnVYaF59w3W8UaApdiEALw_wcB">Gurobi license</a> to run optimization calculations. The <strong>gurobi.lic</strong> must be stored in your local home directory. </p>
-<p>The Optimization Constraints table contains the parameters for your optimization equation. You can edit the parameters by double-clicking the cells:</p>
-<ul>
-<li><strong>Structure</strong>: Lists the available contoured structures.</li>
-<li><strong>Target? (Y/N)</strong>: Enter Y if the dose should be maximized (targets) or N if it should be minimized (organs at risk).</li>
-<li><strong>Dose Goal [Gy]</strong>: The target dose for the structure, in Gray.</li>
-<li><strong>Weight</strong>: The penalty weight parameters for the optimization algorithm.</li>
-</ul>
-<h3 id="standard-optimization-pipeline">Standard Optimization Pipeline</h3>
+                <h1 id="nuclear-medicine">Nuclear Medicine</h1>
+<p>The RapidBrachyMCTPS standalone app also comes equipped a nuclear medicine module called RapidTheraDose. To access the module, click the <strong>RapidTheraDose Module</strong> <img alt="Logo" src="../img/Logo.png" width="25" />. In the standalone application, it is available in the top module tab by default. Otherwise, you can find it in the module dropdown under <code>Nuclear Medicine</code> &gt; <code>RapidTheraDose</code>, or use the <code>Find Module</code> button and search for "RapidTheraDose" if you are using RapidBrachyMCTPS as a 3D Slicer custom module.</p>
+<h2 id="import-tab">Import Tab</h2>
+<p>Once in the <strong>RapidTheraDose Module</strong>, open the <strong>Import tab</strong>. Here, you can load the required images, structures, and dose files for your plan. <strong>Note</strong>: Your DICOM files must already have be loaded into the Slicer scene before initializing a plan; see the <a href="../import/#loading-and-viewing-data">loading DICOM data section</a>.</p>
+<p>Once the DICOM files are loaded into the scene, select an <code>Image Volume</code> (CT, MRI, or US Image), <code>Structure set</code> (contours), and optionally a <code>SPECT/PET Volume</code> or <code>Dose volume</code>. Then click <code>Initialize Plan</code>, this will enable all other tabs.</p>
+<h2 id="phantom-tab">Phantom Tab</h2>
+<p>The Phantom tab allows you to generate a phantom object, assign materials and densities to contoured structures, and define the phantom resolution. Creating a phantom is required before performing dose calculations or generating EGSphant and <code>.mac</code> files.</p>
+<p>The typical workflow for creating a phantom is:</p>
 <ol>
-<li><strong>Select Constraints</strong>: Right-click a structure to toggle it on or off. Shaded structures are disabled and will be ignored during optimization.</li>
-<li><strong>Set Targets</strong>: Define whether each active structure should receive a maximum (Y) or minimum (N) dose in the Target column.</li>
-<li><strong>Set Goals</strong>: Enter the target dose for each active structure.</li>
-<li><strong>Assign Weights</strong>: Enter the penalty weights for each structure.</li>
-<li><strong>Run</strong>: Click Optimize.</li>
+<li><strong>Upload a materials table</strong>. The materials table is a plain-text (.txt) file with the same format described in the <a href="../phantom/#assigning-material-and-density">Assigning Material and Density section</a>. The <code>Hounsfield_Unit</code> column is not used during in this module, but each row must contain a placeholder numeric value (integer or floating-point) in that column. These values must increase monotonically from top to bottom.</li>
+<li><strong>Assign materials to contour structures</strong>. In the Material column, select the desired material for each structure. The corresponding density is automatically populated from the materials table but can be adjusted manually if needed.</li>
+<li><strong>Set the phantom resolution</strong>. Specify the voxel resolution in the X, Y, and Z directions.</li>
+<li><strong>Click Initialize Phantom</strong>.</li>
 </ol>
-<p><strong>Note</strong>: Optimization with a Monte Carlo dose calculation requires that the MC simulation be performed for every dwell position <a href="../dose/#dose">see step 6 of the MC dose calculation</a>.</p>
-<p>Once the optimization finishes, review your results in the <strong>DVH tab</strong>. If the results need refinement, adjust your weights and run the optimization again. The calculated dwell times will automatically update in the catheter table.</p>
-<h3 id="graphical-optimization">Graphical Optimization</h3>
-<p>To perform manual graphical optimization, click the <code>Enable</code> button next to <code>Graphical Optimization</code>. You can then click and drag the isodose lines directly in the viewing panels to adjust the dose distribution. As you modify the lines, the dwell times in the catheter table will update automatically to reflect your changes.</p>
+<h2 id="dose-tab">Dose Tab</h2>
+<p>There are two options for dose calculations:</p>
+<ol>
+<li><strong>LDM</strong> (Local Deposition Method).</li>
+<li><strong>VSV</strong> (Voxel S-Value).</li>
+</ol>
+<h3 id="ldm">LDM</h3>
+<p>Input the appropriate source metrics and click <code>Calculate LDM Dose</code>.</p>
+<h3 id="vsv">VSV</h3>
+<p>TBD</p>
+<h2 id="export-tab">Export Tab</h2>
+<p>The export tab allows you to output the following files:</p>
+<ul>
+<li><strong>EGSphant</strong>: A <code>.egsphant</code> file for the phantom generated in the <strong>Phantom tab</strong>.<ul>
+<li>You must enter a name for the <code>.egsphant</code> file. The default is <code>phantom</code>.</li>
+</ul>
+</li>
+<li><strong>CT Plan</strong>: A <code>.plan</code> file with uniform activity from a CT contour.<ul>
+<li>You must select an organ/contour to use.</li>
+</ul>
+</li>
+<li><strong>NM Plan</strong>: A <code>.plan</code> file from a nuclear medicine image (PET or SPECT).<ul>
+<li>You must enter a threshold value: the percentile threshold for selecting hottest voxels.</li>
+</ul>
+</li>
+<li><strong>MAC File</strong>: A <code>.mac</code> file required to run a Monte Carlo simulation. <strong>Note</strong>: An EGSphant file is also required for Monte Carlo simulations.<ul>
+<li>You must enter the number of computer threads to use during the simulation, the number of histories (number of events/particles to simulate), the atomic mass, and the atomic number.</li>
+</ul>
+</li>
+<li><strong>Dose File</strong>: A <code>.nrrd</code> dose file for each contour structure as well as the whole image.</li>
+<li><strong>Metrics JSON File</strong>: A <code>.json</code> file containing a summary of the files exported.</li>
+</ul>
               
             </div>
           </div><footer>
     <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
-        <a href="../dose/" class="btn btn-neutral float-left" title="Dose"><span class="icon icon-circle-arrow-left"></span> Previous</a>
-        <a href="../dvh/" class="btn btn-neutral float-right" title="DVH Metrics">Next <span class="icon icon-circle-arrow-right"></span></a>
+        <a href="../export/" class="btn btn-neutral float-left" title="Data Saving"><span class="icon icon-circle-arrow-left"></span> Previous</a>
     </div>
 
   <hr/>
@@ -183,10 +216,8 @@
   <span class="rst-current-version" data-toggle="rst-current-version">
     
     
-      <span><a href="../dose/" style="color: #fcfcfc">&laquo; Previous</a></span>
+      <span><a href="../export/" style="color: #fcfcfc">&laquo; Previous</a></span>
     
-    
-      <span><a href="../dvh/" style="color: #fcfcfc">Next &raquo;</a></span>
     
   </span>
 </div>

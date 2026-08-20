@@ -46,6 +46,12 @@ The export tab allows you to output the following files:
     * You must enter a threshold value: the percentile threshold for selecting hottest voxels.
 * **MAC File**: A `.mac` file required to run a Monte Carlo simulation. **Note**: An EGSphant file is also required for Monte Carlo simulations.
     * You must enter the number of computer threads to use during the simulation, the number of histories (number of events/particles to simulate), the atomic mass, and the atomic number.
-* **Dose File**: A `.nrrd` dose file for each contour structure as well as the whole image.
+* **Fast Dose File**: A `.nrrd` dose file for each contour structure as well as the whole image.
+* **MC Dose File**: A `.3ddose` dose file with the MC dose distribution for the given parameters specified in the plan and mac files.
+    * You must export an EGSphant, plan, and mac file to run a MC dose calculation.
+    * You must enter the path to the reDoseV3 executable: 
+        * The executable is stored in the same Docker image as RapidBrachyMC; see [the instructions on how to install it](installation.md#using-docker-image-recommended). 
+        * The path should be set by default to **http://172.30.10.11:8000/calculate_dose_redose**.
+        * <span style="color:red">If you are using **Windows** and you are running **Docker Desktop**, you will need to manually change the path to **http://127.0.0.1:8000/calculate_dose_redose**</span>
 * **Metrics JSON File**: A `.json` file containing a summary of the files exported.
 

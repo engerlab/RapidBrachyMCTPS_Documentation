@@ -22,6 +22,14 @@ This version includes everything you need to run RapidBrachyMCTPS right out of t
 2. Extract the downloaded archive to your preferred directory.
 3. Run the `RapidBrachyMCTPS` executable file.
 
+---
+
+If you are using Windows and encounter an error indicating that `.dll` files are missing or corrupted, try the following:
+
+- Turn off **Smart App Control** in Windows Security.
+- Turn off **Reputation-based pretection** in Windows Security.
+
+If you are still experiencing issues, please [contact us](about.md#contact-us) and we will be happy to help.
 
 ### 3D Slicer Custom Module
 If you prefer to use 3D Slicer's full capabilities while still utilizing the features from RapidBrachyMCTPS or you already use 3D Slicer and want to add RapidBrachyMCTPS to your existing toolkit, you can do so by installing RapidBrachy as a custom module.
