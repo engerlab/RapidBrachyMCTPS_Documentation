@@ -189,7 +189,17 @@
 <li>You must enter the number of computer threads to use during the simulation, the number of histories (number of events/particles to simulate), the atomic mass, and the atomic number.</li>
 </ul>
 </li>
-<li><strong>Dose File</strong>: A <code>.nrrd</code> dose file for each contour structure as well as the whole image.</li>
+<li><strong>Fast Dose File</strong>: A <code>.nrrd</code> dose file for each contour structure as well as the whole image.</li>
+<li><strong>MC Dose File</strong>: A <code>.3ddose</code> dose file with the MC dose distribution for the given parameters specified in the plan and mac files.<ul>
+<li>You must export an EGSphant, plan, and mac file to run a MC dose calculation.</li>
+<li>You must enter the path to the reDoseV3 executable: <ul>
+<li>The executable is stored in the same Docker image as RapidBrachyMC; see <a href="../installation/#using-docker-image-recommended">the instructions on how to install it</a>. </li>
+<li>The path should be set by default to <strong>http://172.30.10.11:8000/calculate_dose_redose</strong>.</li>
+<li><span style="color:red">If you are using <strong>Windows</strong> and you are running <strong>Docker Desktop</strong>, you will need to manually change the path to <strong>http://127.0.0.1:8000/calculate_dose_redose</strong></span></li>
+</ul>
+</li>
+</ul>
+</li>
 <li><strong>Metrics JSON File</strong>: A <code>.json</code> file containing a summary of the files exported.</li>
 </ul>
               
