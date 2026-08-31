@@ -73,6 +73,8 @@
     </li>
         </ul>
     </li>
+    <li class="toctree-l3"><a class="reference internal" href="#installing-rapidtheradose">Installing RapidTheraDose</a>
+    </li>
     <li class="toctree-l3"><a class="reference internal" href="#for-developers">For Developers</a>
     </li>
         </ul>
@@ -199,6 +201,13 @@
 <li>Extract the downloaded archive to your preferred directory.</li>
 <li>Run the <code>RapidBrachyMCTPS</code> executable file.</li>
 </ol>
+<hr />
+<p>If you are using Windows and encounter an error indicating that <code>.dll</code> files are missing or corrupted, try the following:</p>
+<ul>
+<li>Turn off <strong>Smart App Control</strong> in Windows Security.</li>
+<li>Turn off <strong>Reputation-based pretection</strong> in Windows Security.</li>
+</ul>
+<p>If you are still experiencing issues, please <a href="../about/#contact-us">contact us</a> and we will be happy to help.</p>
 <h3 id="3d-slicer-custom-module">3D Slicer Custom Module</h3>
 <p>If you prefer to use 3D Slicer's full capabilities while still utilizing the features from RapidBrachyMCTPS or you already use 3D Slicer and want to add RapidBrachyMCTPS to your existing toolkit, you can do so by installing RapidBrachy as a custom module.</p>
 <p>To get started, install <a href="https://www.slicer.org/">3D Slicer</a>. Then clone the repositories <a href="https://github.com/engerlab/RapidBrachyGUI.git">RapidBrachyGUI</a> and <a href="https://github.com/engerlab/brachyutils">brachyutils</a>. We recommend the location <code>${HOME}/Software/</code> for cloning these repositories.</p>
@@ -240,6 +249,11 @@ pip_install(&quot;-e /Path/To/brachyutils&quot;)
 </code></pre>
 <h4 id="installing-from-source">Installing from source</h4>
 <p>You will need permission from engerlab to clone the <a href="https://github.com/engerlab/RapidBrachyMC">RapidBrachyMC GitHub Repository</a> to install from source. Installation instructions are found in the README file of the repository.</p>
+<h3 id="installing-rapidtheradose">Installing RapidTheraDose</h3>
+<p>If you will want to use the nuclear medicine module RapidTheraDose, you'll need to clone the <a href="https://github.com/engerlab/RapidTheraDoseGUI">RapidTheraDoseGUI repository</a>. Then, repeat the instructions for <a href="#install-rapidbrachygui">installing RapidBrachyGUI</a>, but instead of adding the path to <code>RapidBrachyGUI/RapidBrachy</code>, add the path to <code>RapidTheraDoseGUI/RapidTheraDose</code>.</p>
+<p>To access the RapidTheraDose module, either search for it using the module search bar or select <code>Nuclear Medicine</code> from the module dropdown menu and choose RapidTheraDose.</p>
+<p>For easier access, it is recommended to add RapidTheraDose to your favorites toolbar. To do this, once again open <code>Edit</code>&gt;<code>Application Settings</code>&gt;<code>Modules</code>. This time, in the Modules list, scroll down to find RapidTheraDose, then drag and drop it into the Favorite Modules list and click OK.</p>
+<p>RapidTheraDose will now appear in the toolbar at the top of the screen, allowing you to access it quickly at any time.</p>
 <h3 id="for-developers">For Developers</h3>
 <p>If you are developing this module, enable Developer Mode in Slicer by navigating to <code>Edit</code> &gt; <code>Application</code> &gt; <code>Settings</code> &gt; <code>Developer</code> and clicking <code>Enable developer mode</code>.</p>
 <h2 id="dark-mode">Dark Mode</h2>

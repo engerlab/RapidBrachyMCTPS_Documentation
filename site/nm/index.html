@@ -144,7 +144,8 @@
             <div class="section" itemprop="articleBody">
               
                 <h1 id="nuclear-medicine">Nuclear Medicine</h1>
-<p>The RapidBrachyMCTPS standalone app also comes equipped a nuclear medicine module called RapidTheraDose. To access the module, click the <strong>RapidTheraDose Module</strong> <img alt="Logo" src="../img/Logo.png" width="25" />. In the standalone application, it is available in the top module tab by default. Otherwise, you can find it in the module dropdown under <code>Nuclear Medicine</code> &gt; <code>RapidTheraDose</code>, or use the <code>Find Module</code> button and search for "RapidTheraDose" if you are using RapidBrachyMCTPS as a 3D Slicer custom module.</p>
+<p>The RapidBrachyMCTPS standalone app also comes equipped a nuclear medicine module called RapidTheraDose. If you are using the RapidBrachy module as a custom module in 3D Slicer and would like to use RapidTheraDose, follow the instructions in the <a href="../installation/#installing-rapidtheradose">RapidTheraDose installation guide</a>.</p>
+<p>To access the module, click the <strong>RapidTheraDose Module</strong> <img alt="Logo" src="../img/Logo.png" width="30" />. In the standalone application, it is available in the top module tab by default. Otherwise, you can find it in the module dropdown under <code>Nuclear Medicine</code> &gt; <code>RapidTheraDose</code>, or use the <code>Find Module</code> button and search for "RapidTheraDose" if you are using RapidBrachyMCTPS as a 3D Slicer custom module.</p>
 <h2 id="import-tab">Import Tab</h2>
 <p>Once in the <strong>RapidTheraDose Module</strong>, open the <strong>Import tab</strong>. Here, you can load the required images, structures, and dose files for your plan. <strong>Note</strong>: Your DICOM files must already have be loaded into the Slicer scene before initializing a plan; see the <a href="../import/#loading-and-viewing-data">loading DICOM data section</a>.</p>
 <p>Once the DICOM files are loaded into the scene, select an <code>Image Volume</code> (CT, MRI, or US Image), <code>Structure set</code> (contours), and optionally a <code>SPECT/PET Volume</code> or <code>Dose volume</code>. Then click <code>Initialize Plan</code>, this will enable all other tabs.</p>
@@ -165,8 +166,10 @@
 </ol>
 <h3 id="ldm">LDM</h3>
 <p>Input the appropriate source metrics and click <code>Calculate LDM Dose</code>.</p>
+<p>LDM is a rapid, voxel-level dosimetry technique that assumes all emitted radioactive energy is completely absorbed within the exact voxel where the decay occurs. By assuming zero energy escapes to neighboring tissues, LDM computes extremely quickly. This makes it ideal for alpha emitters and low-energy beta particles whose physical range is smaller than a single imaging voxel, though it will underestimate adjacent tissue doses for highly energetic beta particles or penetrating gamma rays.</p>
 <h3 id="vsv">VSV</h3>
-<p>TBD</p>
+<p>Input the appropriate source metrics and click <code>Calculate VSV Dose</code>.</p>
+<p>VSV is a dosimetry technique that calculates the dose to a specific voxel by summing the radiation contributions from radioactive decay in that voxel and all surrounding voxels. It uses pre-calculated dose kernels, known as S-values, to accurately model the "cross-fire" effect of penetrating radiation escaping one tissue and depositing energy in another. By convolving the patient's 3D activity distribution with these kernels, VSV provides a highly accurate dose estimate for beta and gamma emitters without the massive computation time of full Monte Carlo simulations, though it typically assumes a uniform tissue density (like water) throughout the patient.</p>
 <h2 id="export-tab">Export Tab</h2>
 <p>The export tab allows you to output the following files:</p>
 <ul>
@@ -186,7 +189,17 @@
 <li>You must enter the number of computer threads to use during the simulation, the number of histories (number of events/particles to simulate), the atomic mass, and the atomic number.</li>
 </ul>
 </li>
-<li><strong>Dose File</strong>: A <code>.nrrd</code> dose file for each contour structure as well as the whole image.</li>
+<li><strong>Fast Dose File</strong>: A <code>.nrrd</code> dose file for each contour structure as well as the whole image.</li>
+<li><strong>MC Dose File</strong>: A <code>.3ddose</code> dose file with the MC dose distribution for the given parameters specified in the plan and mac files.<ul>
+<li>You must export an EGSphant, plan, and mac file to run a MC dose calculation.</li>
+<li>You must enter the path to the reDoseV3 executable: <ul>
+<li>The executable is stored in the same Docker image as RapidBrachyMC; see <a href="../installation/#using-docker-image-recommended">the instructions on how to install it</a>. </li>
+<li>The path should be set by default to <strong>http://172.30.10.11:8000/calculate_dose_redose</strong>.</li>
+<li><span style="color:red">If you are using <strong>Windows</strong> and you are running <strong>Docker Desktop</strong>, you will need to manually change the path to <strong>http://127.0.0.1:8000/calculate_dose_redose</strong></span></li>
+</ul>
+</li>
+</ul>
+</li>
 <li><strong>Metrics JSON File</strong>: A <code>.json</code> file containing a summary of the files exported.</li>
 </ul>
               
