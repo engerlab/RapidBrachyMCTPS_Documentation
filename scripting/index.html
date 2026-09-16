@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       <link rel="shortcut icon" href="../img/favicon.ico" />
-    <title>Initializing a Plan - RapidBrachyMCTPS</title>
+    <title>Scripting - RapidBrachyMCTPS</title>
     <link rel="stylesheet" href="../css/theme.css" />
     <link rel="stylesheet" href="../css/theme_extra.css" />
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
@@ -13,8 +13,8 @@
     
       <script>
         // Current page data
-        var mkdocs_page_name = "Initializing a Plan";
-        var mkdocs_page_input_path = "plan.md";
+        var mkdocs_page_name = "Scripting";
+        var mkdocs_page_input_path = "scripting.md";
         var mkdocs_page_url = null;
       </script>
     
@@ -56,18 +56,8 @@
                 <li class="toctree-l1"><a class="reference internal" href="../import/">Data Loading and Viewing</a>
                 </li>
               </ul>
-              <ul class="current">
-                <li class="toctree-l1 current"><a class="reference internal current" href="#">Initializing a Plan</a>
-    <ul class="current">
-    <li class="toctree-l2"><a class="reference internal" href="#create-a-new-plan">Create a new plan</a>
-    </li>
-    <li class="toctree-l2"><a class="reference internal" href="#import-an-existing-plan">Import an existing plan</a>
-    </li>
-    <li class="toctree-l2"><a class="reference internal" href="#setting-a-roi">Setting a ROI</a>
-    </li>
-    <li class="toctree-l2"><a class="reference internal" href="#roi-by-contour">ROI by Contour</a>
-    </li>
-    </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../plan/">Initializing a Plan</a>
                 </li>
               </ul>
               <ul>
@@ -110,8 +100,10 @@
                 <li class="toctree-l1"><a class="reference internal" href="../export/">Data Saving</a>
                 </li>
               </ul>
-              <ul>
-                <li class="toctree-l1"><a class="reference internal" href="../scripting/">Scripting</a>
+              <ul class="current">
+                <li class="toctree-l1 current"><a class="reference internal current" href="#">Scripting</a>
+    <ul class="current">
+    </ul>
                 </li>
               </ul>
               <ul>
@@ -132,7 +124,7 @@
         <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
   <ul class="wy-breadcrumbs">
     <li><a href=".." class="icon icon-home" aria-label="Docs"></a></li>
-      <li class="breadcrumb-item active">Initializing a Plan</li>
+      <li class="breadcrumb-item active">Scripting</li>
     <li class="wy-breadcrumbs-aside">
     </li>
   </ul>
@@ -141,36 +133,18 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
             <div class="section" itemprop="articleBody">
               
-                <h1 id="initializing-a-plan">Initializing a Plan</h1>
-<p>To initialize a plan, open the <strong>RapidBrachy Module</strong> <img alt="Logo" src="../img/Logo.png" width="30" />. In the standalone application, it is available in the top module tab by default. Otherwise, you can find it in the module dropdown under <code>Brachytherapy</code> &gt; <code>RapidBrachy</code>, or use the <code>Find Module</code> button and search for "RapidBrachy" if you are using RapidBrachyMCTPS as a 3D Slicer custom module.</p>
-<p><img alt="rapidbrachy" src="../img/rapidbrachy.png" width="900" /></p>
-<p>Once in the <strong>RapidBrachy Module</strong>, open the <strong>Import tab</strong>. Here, you have two options:</p>
-<ol>
-<li>Create a new plan.</li>
-<li>Import an existing plan.</li>
-</ol>
-<h3 id="create-a-new-plan">Create a new plan</h3>
-<p>To create a new plan, you must already have loaded DICOM data from the <strong>DICOM Module</strong>, see <a href="../import/#loading-dicom-data">instructions under Data Loading and Viewing</a>. Select an <code>Image Volume</code> (CT, MRI, or US Image) and <code>Structure set</code>, and optionally an <code>RT plan</code> or <code>Dose volume</code>. Then click <code>Initialize Plan</code>.</p>
-<h3 id="import-an-existing-plan">Import an existing plan</h3>
-<p>To import an existing plan, it must be a plan that has already been exported by RapidBrachyMCTPS from the <strong>Export tab</strong>, using the RapidBrachyGUI preset.</p>
-<h3 id="setting-a-roi">Setting a ROI</h3>
-<p>Once a plan is created/loaded, the data will appear in the viewing panels, overlaid with a pink box representing the Region of Interest (ROI). Adjust this box along all three orthogonal axes to include only the anatomy you want evaluated during dose calculations. Keep in mind that the smaller the ROI, the faster the MC and TG-43 simulations will run.</p>
-<p><img alt="ROI" src="../img/ROI.png" width="900" /></p>
-<p><img alt="ROIBreastOnly" src="../img/ROIBreastOnly.png" width="600" /></p>
-<h3 id="roi-by-contour">ROI by Contour</h3>
-<p>You can also automatically generate a ROI based on existing structures rather than defining it manually.</p>
-<ol>
-<li>Navigate to the <strong>ROI tab</strong> and use the <code>Conform to contours</code> drop-down menu to select the structures you want to include.</li>
-<li>Specify a margin (in mm) to define the buffer distance between your selected structures and the outer ROI boundary.</li>
-<li>Click <code>Update</code> and wait for the software to generate the new bounding volume.</li>
-</ol>
-<p><img alt="ROI" src="../img/ROITab.png" width="900" /></p>
+                <h1 id="scripting">Scripting</h1>
+<p>RapidBrachyMCTPS supports scripting through the <strong>Python Console</strong>, powered by the <a href="https://github.com/engerlab/brachyutils">BrachyUtils</a> library. Familiarity with BrachyUtils is recommended before using this feature; documentation is available <a href="https://engerlab.github.io/brachyutils/brachyutils.html">here</a>.</p>
+<p>From the Python Console <img alt="python_console" src="../img/python_console.png" width="25" />, access the <code>brachyplan</code> object with:</p>
+<pre><code class="language-python">&gt;&gt;&gt; slicer.modules.RapidBrachyWidget.logic.brachyplan
+</code></pre>
+<p>All other BrachyUtils objects and methods are accessible from the console; tab completion is available to help explore them.</p>
               
             </div>
           </div><footer>
     <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
-        <a href="../import/" class="btn btn-neutral float-left" title="Data Loading and Viewing"><span class="icon icon-circle-arrow-left"></span> Previous</a>
-        <a href="../catheter/" class="btn btn-neutral float-right" title="Catheters">Next <span class="icon icon-circle-arrow-right"></span></a>
+        <a href="../export/" class="btn btn-neutral float-left" title="Data Saving"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../nm/" class="btn btn-neutral float-right" title="Nuclear Medicine">Next <span class="icon icon-circle-arrow-right"></span></a>
     </div>
 
   <hr/>
@@ -193,10 +167,10 @@
   <span class="rst-current-version" data-toggle="rst-current-version">
     
     
-      <span><a href="../import/" style="color: #fcfcfc">&laquo; Previous</a></span>
+      <span><a href="../export/" style="color: #fcfcfc">&laquo; Previous</a></span>
     
     
-      <span><a href="../catheter/" style="color: #fcfcfc">Next &raquo;</a></span>
+      <span><a href="../nm/" style="color: #fcfcfc">Next &raquo;</a></span>
     
   </span>
 </div>
