@@ -1,6 +1,13 @@
 # Source
+To choose a source, navigate to the **Source tab** in the RapidBrachy module. The source and its parameters should automatically be loaded if you initialized a plan with an RTPlan file. Otherwise, you must enter the following source parameters:
 
-To choose a source, navigate to the **Source tab** in the RapidBrachy module. You will be prompted to choose a `Source Model`, `Core`, atomic mass (`A`), and atomic number (`Z`). Select a `Treatment Type` between HDR (High Dose Rate), PLDR (Permanent Low Dose Rate), and TLDR (Temporary Low Dose Rate). Input an `Air-kerma strength [U]` and an `Air-kerma per history strength`.
+- `Source Model`
+- `Core`
+- Atomic mass (`A`)
+- Atomic number (`Z`)
+- `Treatment Type` (HDR (High Dose Rate), PLDR (Permanent Low Dose Rate), or TLDR (Temporary Low Dose Rate))
+- `Air-kerma strength [U]`
+- `Air-kerma per history strength`
 
 ### Database of Source Characteristics
 The table below details the air-kerma strength and air-kerma per history for various brachytherapy sources and isotopes, as calculated by RapidBrachyTG43. Note that any digit enclosed in parentheses represents the absolute uncertainty in the final digit of the value.

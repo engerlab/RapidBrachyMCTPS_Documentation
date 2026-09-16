@@ -30,21 +30,20 @@ Select an output directory, then select the desired option listed under the **Al
 
 ### LDM
 * Input the appropriate source metrics and click `Calculate LDM Dose`.
-* The algorithm outputs `.3ddose` files; one for each contoured structure and one for the whole image.
+* The algorithm outputs `.nrrd` files; one for each contoured structure and one for the whole image.
 
 LDM is a rapid, voxel-level dosimetry technique that assumes all emitted radioactive energy is completely absorbed within the exact voxel where the decay occurs. By assuming zero energy escapes to neighboring tissues, LDM computes extremely quickly. This makes it ideal for alpha emitters and low-energy beta particles whose physical range is smaller than a single imaging voxel, though it will underestimate adjacent tissue doses for highly energetic beta particles or penetrating gamma rays.
 
 ### VSV
 * Input the appropriate source metrics and click `Calculate VSV Dose`.
-* The algorithm outputs `.3ddose` files; one for each contoured structure and one for the whole image.
+* The algorithm outputs `.nrrd` files; one for each contoured structure and one for the whole image.
 
 VSV is a dosimetry technique that calculates the dose to a specific voxel by summing the radiation contributions from radioactive decay in that voxel and all surrounding voxels. It uses pre-calculated dose kernels, known as S-values, to accurately model the "cross-fire" effect of penetrating radiation escaping one tissue and depositing energy in another. By convolving the patient's 3D activity distribution with these kernels, VSV provides a highly accurate dose estimate for beta and gamma emitters without the massive computation time of full Monte Carlo simulations, though it typically assumes a uniform tissue density (like water) throughout the patient.
 
 ### MC
 * Input the path to the reDoseV3 executable: 
     * The executable is stored in the same Docker image as RapidBrachyMC; see [the instructions on how to install it](installation.md#using-docker-image-recommended). 
-    * The path should be set by default to **http://172.30.10.11:8000/calculate_dose_redose**.
-    * <span style="color:red">If you are using **Windows** and you are running **Docker Desktop**, you will need to manually change the path to **http://127.0.0.1:8000/calculate_dose_redose**</span>
+    * The path should be set by default to **http://127.0.0.1:8000/calculate_dose_redose**.
 * The `Filename` will be used for the `.plan`, `.mac`, and `.egsphant` files.
 * Select one of the `Plan Modality` options:
     * `SPECT/PET`: the MC simulation will operate using the PET/SPECT file as a template. You must enter a threshold value.

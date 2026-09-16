@@ -113,6 +113,8 @@
     </li>
     <li class="toctree-l3"><a class="reference internal" href="#vsv">VSV</a>
     </li>
+    <li class="toctree-l3"><a class="reference internal" href="#mc">MC</a>
+    </li>
         </ul>
     </li>
     <li class="toctree-l2"><a class="reference internal" href="#export-tab">Export Tab</a>
@@ -159,17 +161,41 @@
 <li><strong>Click Initialize Phantom</strong>.</li>
 </ol>
 <h2 id="dose-tab">Dose Tab</h2>
-<p>There are two options for dose calculations:</p>
+<p>There are three available dose calculation options:</p>
 <ol>
 <li><strong>LDM</strong> (Local Deposition Method).</li>
 <li><strong>VSV</strong> (Voxel S-Value).</li>
+<li><strong>MC</strong> (Monte Carlo).</li>
 </ol>
+<p>Select an output directory, then select the desired option listed under the <strong>Algorithm</strong> drop-down menu.</p>
 <h3 id="ldm">LDM</h3>
-<p>Input the appropriate source metrics and click <code>Calculate LDM Dose</code>.</p>
+<ul>
+<li>Input the appropriate source metrics and click <code>Calculate LDM Dose</code>.</li>
+<li>The algorithm outputs <code>.3ddose</code> files; one for each contoured structure and one for the whole image.</li>
+</ul>
 <p>LDM is a rapid, voxel-level dosimetry technique that assumes all emitted radioactive energy is completely absorbed within the exact voxel where the decay occurs. By assuming zero energy escapes to neighboring tissues, LDM computes extremely quickly. This makes it ideal for alpha emitters and low-energy beta particles whose physical range is smaller than a single imaging voxel, though it will underestimate adjacent tissue doses for highly energetic beta particles or penetrating gamma rays.</p>
 <h3 id="vsv">VSV</h3>
-<p>Input the appropriate source metrics and click <code>Calculate VSV Dose</code>.</p>
+<ul>
+<li>Input the appropriate source metrics and click <code>Calculate VSV Dose</code>.</li>
+<li>The algorithm outputs <code>.3ddose</code> files; one for each contoured structure and one for the whole image.</li>
+</ul>
 <p>VSV is a dosimetry technique that calculates the dose to a specific voxel by summing the radiation contributions from radioactive decay in that voxel and all surrounding voxels. It uses pre-calculated dose kernels, known as S-values, to accurately model the "cross-fire" effect of penetrating radiation escaping one tissue and depositing energy in another. By convolving the patient's 3D activity distribution with these kernels, VSV provides a highly accurate dose estimate for beta and gamma emitters without the massive computation time of full Monte Carlo simulations, though it typically assumes a uniform tissue density (like water) throughout the patient.</p>
+<h3 id="mc">MC</h3>
+<ul>
+<li>Input the path to the reDoseV3 executable: <ul>
+<li>The executable is stored in the same Docker image as RapidBrachyMC; see <a href="../installation/#using-docker-image-recommended">the instructions on how to install it</a>. </li>
+<li>The path should be set by default to <strong>http://172.30.10.11:8000/calculate_dose_redose</strong>.</li>
+<li><span style="color:red">If you are using <strong>Windows</strong> and you are running <strong>Docker Desktop</strong>, you will need to manually change the path to <strong>http://127.0.0.1:8000/calculate_dose_redose</strong></span></li>
+</ul>
+</li>
+<li>The <code>Filename</code> will be used for the <code>.plan</code>, <code>.mac</code>, and <code>.egsphant</code> files.</li>
+<li>Select one of the <code>Plan Modality</code> options:<ul>
+<li><code>SPECT/PET</code>: the MC simulation will operate using the PET/SPECT file as a template. You must enter a threshold value.</li>
+<li><code>CT</code>: the MC simulation will operate using a single contoured structure as the injection point. You must enter a CT plan organ from the list.</li>
+</ul>
+</li>
+<li>The algorithm outputs a <code>.3ddose</code> file.</li>
+</ul>
 <h2 id="export-tab">Export Tab</h2>
 <p>The export tab allows you to output the following files:</p>
 <ul>
@@ -187,17 +213,6 @@
 </li>
 <li><strong>MAC File</strong>: A <code>.mac</code> file required to run a Monte Carlo simulation. <strong>Note</strong>: An EGSphant file is also required for Monte Carlo simulations.<ul>
 <li>You must enter the number of computer threads to use during the simulation, the number of histories (number of events/particles to simulate), the atomic mass, and the atomic number.</li>
-</ul>
-</li>
-<li><strong>Fast Dose File</strong>: A <code>.nrrd</code> dose file for each contour structure as well as the whole image.</li>
-<li><strong>MC Dose File</strong>: A <code>.3ddose</code> dose file with the MC dose distribution for the given parameters specified in the plan and mac files.<ul>
-<li>You must export an EGSphant, plan, and mac file to run a MC dose calculation.</li>
-<li>You must enter the path to the reDoseV3 executable: <ul>
-<li>The executable is stored in the same Docker image as RapidBrachyMC; see <a href="../installation/#using-docker-image-recommended">the instructions on how to install it</a>. </li>
-<li>The path should be set by default to <strong>http://172.30.10.11:8000/calculate_dose_redose</strong>.</li>
-<li><span style="color:red">If you are using <strong>Windows</strong> and you are running <strong>Docker Desktop</strong>, you will need to manually change the path to <strong>http://127.0.0.1:8000/calculate_dose_redose</strong></span></li>
-</ul>
-</li>
 </ul>
 </li>
 <li><strong>Metrics JSON File</strong>: A <code>.json</code> file containing a summary of the files exported.</li>

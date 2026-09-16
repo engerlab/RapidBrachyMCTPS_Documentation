@@ -10,6 +10,7 @@ Before running a dose calculation, verify that you have completed your setup. En
 
 * Configured all catheters and applicators (if applicable).
 * Defined the brachytherapy source.
+    * Ensure you specified the treatment type; between **HDR**, **PLDR**, and **TLDR**
 * Initialized your phantom.
 
 Enter the desired prescription dose in Grays. Select your desired algorithm for the dose calculation; RapidBrachyMCTPS is equipped with both the conventional TG-43 formalism and a Geant4-based Monte Carlo (MC) engine.
@@ -22,17 +23,24 @@ Enter the desired prescription dose in Grays. Select your desired algorithm for 
 #### MC
 To perform Monte Carlo simulations, you will need to have installed RapidBrachyMC. See the instructions on [installing RapidBrachyMC](installation.md#installing-rapidbrachymc) for details.
 
+**Note**: Simulation time depends on several factors, including the number of histories, the size of the ROI, and your computer's performance. As a result, the simulation may take a considerable amount of time to complete.
+
 1. Enter the path to the RapidBrachyMC executable.
     - If you installed RapidBrachyMC from source, set the path to the executable named `RapidBrachyMC`.
     - If you are using the RapidBrachyMC Docker image, the path should be automatically set to **http://172.30.10.11:8000/calculate_dose_mc**
-        - <span style="color:red">**Note**: If you are using **Windows**, you must first run Docker Desktop and manually change the path to **http://127.0.0.1:8000/calculate_dose_mc** before running the calculation.</span>
 2. Enter the path to the desired output directory.
 3. Enter the desired number of histories. This refers to the number of simulation trials.
 4. Enter the number of threads (computer cores).
 5. Enter a random seed for the simulation.
 6. If you want to calculate the dose for each individual dwell position, select `Prepare for Optimization`. Otherwise, only the combined dose is computed.
 7. Click `Calculate Dose`.
-8. The dose will be loaded and the catheter table will be populated. The catheter table dwell times can be manually modified. **Note**: Simulation time depends on several factors, including the number of histories, the size of the ROI, and your computer's performance. As a result, the simulation may take a considerable amount of time to complete.
+8. The dose will be loaded and the catheter table will be populated. The catheter table dwell times can be manually modified.
+
+#### TG-43 (Legacy C++)
+This is a legacy version of the TG-43 algorithm, which requires access to the TG43DoseCalculator executable. 
+
+#### TG-43S
+This version of the TG-43 algorithm adds a shielding functionality and requires shielding kernels.
 
 ## Isodode Lines
 You can customize the isodose lines in the Isodose Levels table by adding or removing levels and modifying their colour scheme.

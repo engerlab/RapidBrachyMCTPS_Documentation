@@ -17,3 +17,9 @@ You can scroll through image slices using the mouse wheel. To pan the image, cli
 
 To inspect the individual nodes, navigate to **Data** in the module tab ![data](img/data.png){ width="25" }. For a detailed overview of the terminology and structure used in 3D Slicer and RapidBrachyMCTPS, refer to the [Slicer MRML Documentation](https://slicer.readthedocs.io/en/latest/developer_guide/mrml_overview.html).
 
+## Slicer's Coordinate System
+Slicer uses the RAS (Right, Anterior, Superior) coordinate system internally for all data types. This differs from the LPS (Left, Posterior, Superior) system used by formats such as DICOM.
+
+For compatibility with other software, Slicer assumes that file data is stored in LPS unless the file explicitly states otherwise. When reading or writing files, Slicer flips the sign of the first two coordinate axes as needed to convert between the two systems.
+
+For more information, see the Slicer [coordinate systems documentation](https://slicer.readthedocs.io/en/latest/user_guide/coordinate_systems.html).
