@@ -105,6 +105,10 @@
                 </li>
               </ul>
               <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../scripting/">Scripting</a>
+                </li>
+              </ul>
+              <ul>
                 <li class="toctree-l1"><a class="reference internal" href="../nm/">Nuclear Medicine</a>
                 </li>
               </ul>
@@ -132,7 +136,16 @@
             <div class="section" itemprop="articleBody">
               
                 <h1 id="source">Source</h1>
-<p>To choose a source, navigate to the <strong>Source tab</strong> in the RapidBrachy module. You will be prompted to choose a <code>Source Model</code>, <code>Core</code>, atomic mass (<code>A</code>), and atomic number (<code>Z</code>). Select a <code>Treatment Type</code> between HDR (High Dose Rate), PLDR (Permanent Low Dose Rate), and TLDR (Temporary Low Dose Rate). Input an <code>Air-kerma strength [U]</code> and an <code>Air-kerma per history strength</code>.</p>
+<p>To choose a source, navigate to the <strong>Source tab</strong> in the RapidBrachy module. The source and its parameters should automatically be loaded if you initialized a plan with an RTPlan file. Otherwise, you must enter the following source parameters:</p>
+<ul>
+<li><code>Source Model</code></li>
+<li><code>Core</code></li>
+<li>Atomic mass (<code>A</code>)</li>
+<li>Atomic number (<code>Z</code>)</li>
+<li><code>Treatment Type</code> (HDR (High Dose Rate), PLDR (Permanent Low Dose Rate), or TLDR (Temporary Low Dose Rate))</li>
+<li><code>Air-kerma strength [U]</code></li>
+<li><code>Air-kerma per history strength</code></li>
+</ul>
 <h3 id="database-of-source-characteristics">Database of Source Characteristics</h3>
 <p>The table below details the air-kerma strength and air-kerma per history for various brachytherapy sources and isotopes, as calculated by RapidBrachyTG43. Note that any digit enclosed in parentheses represents the absolute uncertainty in the final digit of the value.</p>
 <table>
