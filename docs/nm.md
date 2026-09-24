@@ -44,6 +44,7 @@ VSV is a dosimetry technique that calculates the dose to a specific voxel by sum
 * Input the path to the reDoseV3 executable: 
     * The executable is stored in the same Docker image as RapidBrachyMC; see [the instructions on how to install it](installation.md#using-docker-image-recommended). 
     * The path should be set by default to **http://127.0.0.1:8000/calculate_dose_redose**.
+    * If you are using **Windows**, run the Docker Desktop app now.
 * The `Filename` will be used for the `.plan`, `.mac`, and `.egsphant` files.
 * Select one of the `Plan Modality` options:
     * `SPECT/PET`: the MC simulation will operate using the PET/SPECT file as a template. You must enter a threshold value.
