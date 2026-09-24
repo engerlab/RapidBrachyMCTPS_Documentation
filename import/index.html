@@ -55,6 +55,8 @@
               <ul class="current">
                 <li class="toctree-l1 current"><a class="reference internal current" href="#">Data Loading and Viewing</a>
     <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#dicom-data-requirements">DICOM Data Requirements</a>
+    </li>
     <li class="toctree-l2"><a class="reference internal" href="#loading-dicom-data">Loading DICOM Data</a>
     </li>
     <li class="toctree-l2"><a class="reference internal" href="#viewing-dicom-data">Viewing DICOM Data</a>
@@ -140,6 +142,14 @@
             <div class="section" itemprop="articleBody">
               
                 <h1 id="loading-and-viewing-data">Loading and Viewing Data</h1>
+<h2 id="dicom-data-requirements">DICOM Data Requirements</h2>
+<p>To load successfully, any RTPlan, RTStruct, or RTDose DICOM files <strong>must follow the RapidBrachyMCTPS naming convention:</strong></p>
+<ul>
+<li><strong>RTPlan files:</strong> Must begin with the prefix <strong>RP</strong> (e.g., <code>RP*.dcm</code>)</li>
+<li><strong>RTStruct files:</strong> Must begin with the prefix <strong>RS</strong> (e.g., <code>RS*.dcm</code>)</li>
+<li><strong>RTDose files:</strong> Must begin with the prefix <strong>RD</strong> (e.g., <code>RD*.dcm</code>)</li>
+</ul>
+<p>Additionally, all associated DICOM files (CT, RTPlan, RTStruct, and RTDose) must be stored together in the same directory.</p>
 <h2 id="loading-dicom-data">Loading DICOM Data</h2>
 <p>You can import DICOM files by clicking <code>File</code> then <code>Add DICOM Data</code> or by clicking the DICOM Module widget just below the <code>Edit</code> tab.</p>
 <p><img alt="dicom" src="../img/dicom.png" width="300" /></p>
