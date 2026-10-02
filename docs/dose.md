@@ -16,7 +16,7 @@ Before running a dose calculation, verify that you have completed your setup. En
 Enter the desired prescription dose in Grays. Select your desired algorithm for the dose calculation; RapidBrachyMCTPS is equipped with both the conventional TG-43 formalism and a Geant4-based Monte Carlo (MC) engine.
 
 #### TG-43
-1. Enter the path to the TG-43 parameter data so that it matches the chosen source, it should have a default path. If the parameter data path does not match the chosen source, navigate one directory up to `TG43_Parameter_Data` and select the correct path.
+1. Enter the path to the TG-43 parameter data so that it matches the chosen source, it should have a default path. If the parameter data path does not match the chosen source, navigate one directory up to `TG43_Parameter_Data` and select the correct path. **Note:** This version of TG-43 does not yet support LDR dose calculations; to run LDR TG-43, use the [TG-43 (Legacy C++) version](dose.md#tg-43-legacy-c). 
 2. Click `Calculate Dose`.
 3. The dose will be loaded and the catheter table will be populated. The catheter table dwell times can be manually modified.
 
@@ -39,7 +39,16 @@ To perform Monte Carlo simulations, you will need to have installed RapidBrachyM
 8. The dose will be loaded and the catheter table will be populated. The catheter table dwell times can be manually modified.
 
 #### TG-43 (Legacy C++)
-This is a legacy version of the TG-43 algorithm, which requires access to the TG43DoseCalculator executable. 
+This is a legacy version of the TG-43 algorithm, you can use it with the rapidbrachy_mc Docker image or install it from source.
+
+1. Enter the path to the TG43DoseCalculator executable.
+    - If you installed TG43DoseCalculator from source, set the path to the executable named `TG43DoseCalculator`.
+    - If you are using the RapidBrachyMC Docker image, the path should be automatically set to **http://172.30.10.12:8001/calculate_dose_tg43**
+        - If you are using **Windows**, run the Docker Desktop app now.
+2. Enter the path to the desired output directory.
+3. Enter the path to the appropriate TG-43 source parameters.
+4. Click `Calculate Dose`.
+5. The dose will be loaded and the catheter table will be populated. The catheter table dwell times can be manually modified.
 
 #### TG-43S
 This version of the TG-43 algorithm adds a shielding functionality and requires shielding kernels.
