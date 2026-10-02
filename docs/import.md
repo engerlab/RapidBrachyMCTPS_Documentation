@@ -1,4 +1,13 @@
 # Loading and Viewing Data
+## DICOM Data Requirements
+To load successfully, any RTPlan, RTStruct, or RTDose DICOM files **must follow the RapidBrachyMCTPS naming convention:**
+
+* **RTPlan files:** Must begin with the prefix **RP** (e.g., `RP*.dcm`)
+* **RTStruct files:** Must begin with the prefix **RS** (e.g., `RS*.dcm`)
+* **RTDose files:** Must begin with the prefix **RD** (e.g., `RD*.dcm`)
+
+Additionally, all associated DICOM files (CT, RTPlan, RTStruct, and RTDose) must be stored together in the same directory.
+
 ## Loading DICOM Data
 You can import DICOM files by clicking `File` then `Add DICOM Data` or by clicking the DICOM Module widget just below the `Edit` tab.
 

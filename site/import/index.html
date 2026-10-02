@@ -59,6 +59,8 @@
     </li>
     <li class="toctree-l2"><a class="reference internal" href="#viewing-dicom-data">Viewing DICOM Data</a>
     </li>
+    <li class="toctree-l2"><a class="reference internal" href="#slicers-coordinate-system">Slicer's Coordinate System</a>
+    </li>
     </ul>
                 </li>
               </ul>
@@ -107,6 +109,10 @@
                 </li>
               </ul>
               <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../scripting/">Scripting</a>
+                </li>
+              </ul>
+              <ul>
                 <li class="toctree-l1"><a class="reference internal" href="../nm/">Nuclear Medicine</a>
                 </li>
               </ul>
@@ -144,6 +150,10 @@
 <p>You can scroll through image slices using the mouse wheel. To pan the image, click and hold the mouse wheel and drag (or hold Shift + left click and drag). To zoom, right-click and drag.</p>
 <p><img alt="loaded" src="../img/loaded.png" width="900" /> </p>
 <p>To inspect the individual nodes, navigate to <strong>Data</strong> in the module tab <img alt="data" src="../img/data.png" width="25" />. For a detailed overview of the terminology and structure used in 3D Slicer and RapidBrachyMCTPS, refer to the <a href="https://slicer.readthedocs.io/en/latest/developer_guide/mrml_overview.html">Slicer MRML Documentation</a>.</p>
+<h2 id="slicers-coordinate-system">Slicer's Coordinate System</h2>
+<p>Slicer uses the RAS (Right, Anterior, Superior) coordinate system internally for all data types. This differs from the LPS (Left, Posterior, Superior) system used by formats such as DICOM.</p>
+<p>For compatibility with other software, Slicer assumes that file data is stored in LPS unless the file explicitly states otherwise. When reading or writing files, Slicer flips the sign of the first two coordinate axes as needed to convert between the two systems.</p>
+<p>For more information, see the Slicer <a href="https://slicer.readthedocs.io/en/latest/user_guide/coordinate_systems.html">coordinate systems documentation</a>.</p>
               
             </div>
           </div><footer>
