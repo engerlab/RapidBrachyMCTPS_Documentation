@@ -201,8 +201,9 @@
 <h3 id="standalone-application">Standalone Application</h3>
 <p>This version includes everything you need to run RapidBrachyMCTPS right out of the box.</p>
 <ol>
-<li>Download the latest release from the OneDrive (provided by Enger Lab).</li>
-<li>Extract the downloaded archive to your preferred directory.</li>
+<li>Download the latest RapidBrachyMCTPS release from the OneDrive (provided by Enger Lab).</li>
+<li>[Optional] Download the <a href="#installing-rapidbrachymc">Monte-Carlo engine requirements</a>.</li>
+<li>Run the downloaded RapidBrachyMCTPS installer.</li>
 <li>Run the <code>RapidBrachyMCTPS</code> executable file.</li>
 </ol>
 <hr />
@@ -243,13 +244,13 @@ pip_install(&quot;-e /Path/To/brachyutils&quot;)
 <li>Installing RapidBrachyMC from source.</li>
 </ol>
 <h4 id="using-docker-image-recommended">Using Docker Image (Recommended)</h4>
-<p>Download the docker image (rapidbrachy_mc.tar) from the OneDrive and place it in your desired location. </p>
+<p>Download the docker image (mc_dose_calc.tar) from the OneDrive and place it in your desired location. </p>
 <ul>
 <li>If you are using <strong>Linux</strong>, you will need to install <a href="https://docs.docker.com/engine/install/">Docker Engine</a>.</li>
-<li>If you are using <strong>Windows</strong>, you will need to install <a href="https://docs.docker.com/desktop/setup/install/windows-install/">Docker Desktop</a>. </li>
+<li>If you are using <strong>Windows or Mac</strong>, you will need to install <a href="https://docs.docker.com/desktop/setup/install/windows-install/">Docker Desktop</a>. </li>
 </ul>
 <p>Then run this command in the Terminal/PowerShell:</p>
-<pre><code class="language-sh">docker load -i Path/To/rapidbrachy_mc.tar
+<pre><code class="language-sh">docker load -i Path/To/mc_dose_calc.tar
 </code></pre>
 <h4 id="installing-from-source">Installing from source</h4>
 <p>You will need permission from engerlab to clone the <a href="https://github.com/engerlab/RapidBrachyMC">RapidBrachyMC GitHub Repository</a> to install from source. Installation instructions are found in the README file of the repository.</p>
