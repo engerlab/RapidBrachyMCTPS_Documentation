@@ -18,9 +18,10 @@ We recommend the **Standalone Application** for users who want a streamlined, tu
 ### Standalone Application
 This version includes everything you need to run RapidBrachyMCTPS right out of the box.
 
-1. Download the latest release from the OneDrive (provided by Enger Lab).
-2. Extract the downloaded archive to your preferred directory.
-3. Run the `RapidBrachyMCTPS` executable file.
+1. Download the latest RapidBrachyMCTPS release from the OneDrive (provided by Enger Lab).
+2. [Optional] Download the [Monte-Carlo engine requirements](#installing-rapidbrachymc).
+3. Run the downloaded RapidBrachyMCTPS installer.
+4. Run the `RapidBrachyMCTPS` executable file.
 
 ---
 
@@ -78,14 +79,14 @@ If you will want to run Monte Carlo simulations, you will need to install [Rapid
 2. Installing RapidBrachyMC from source.
 
 #### Using Docker Image (Recommended)
-Download the docker image (rapidbrachy_mc.tar) from the OneDrive and place it in your desired location. 
+Download the docker image (mc_dose_calc.tar) from the OneDrive and place it in your desired location. 
 
 * If you are using **Linux**, you will need to install [Docker Engine](https://docs.docker.com/engine/install/).
-* If you are using **Windows**, you will need to install [Docker Desktop](https://docs.docker.com/desktop/setup/install/windows-install/). 
+* If you are using **Windows or Mac**, you will need to install [Docker Desktop](https://docs.docker.com/desktop/setup/install/windows-install/). 
 
 Then run this command in the Terminal/PowerShell:
 ```sh
-docker load -i Path/To/rapidbrachy_mc.tar
+docker load -i Path/To/mc_dose_calc.tar
 ```
 
 #### Installing from source

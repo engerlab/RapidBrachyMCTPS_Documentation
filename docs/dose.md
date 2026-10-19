@@ -38,13 +38,13 @@ To perform Monte Carlo simulations, you will need to have installed RapidBrachyM
 8. The dose will be loaded and the catheter table will be populated. The catheter table dwell times can be manually modified.
 
 #### TG-43 (Legacy C++)
-This is a legacy version of the TG-43 algorithm, you can use it with the rapidbrachy_mc Docker image or install it from source.
+This is a legacy version of the TG-43 algorithm, you can use it with the mc_dose_calc Docker image or install it from source.
 
 1. Enter the path to the TG43DoseCalculator executable.
     - If you installed TG43DoseCalculator from source, set the path to the executable named `TG43DoseCalculator`.
     - If you are using the RapidBrachyMC Docker image, the path should be automatically set to **http://172.30.10.12:8001/calculate_dose_tg43**
         - If you are using **Linux**, Change the path to **http://172.30.10.12:8000/calculate_dose_tg43**.
-        - If you are using **Windows**, run the Docker Desktop app now.
+        - If you are using **Windows or Mac**, run the Docker Desktop app now.
 2. Enter the path to the desired output directory.
 3. Enter the path to the appropriate TG-43 source parameters.
 4. Click `Calculate Dose`.
