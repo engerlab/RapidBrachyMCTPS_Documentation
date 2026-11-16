@@ -57,7 +57,7 @@
     </li>
     <li class="toctree-l3"><a class="reference internal" href="#3d-slicer-custom-module">3D Slicer Custom Module</a>
         <ul>
-    <li class="toctree-l4"><a class="reference internal" href="#install-brachyutils">Install brachyutils</a>
+    <li class="toctree-l4"><a class="reference internal" href="#install-brachyutils-dependencies">Install brachyutils + Dependencies</a>
     </li>
     <li class="toctree-l4"><a class="reference internal" href="#install-slicerrt">Install SlicerRT</a>
     </li>
@@ -216,10 +216,11 @@
 <h3 id="3d-slicer-custom-module">3D Slicer Custom Module</h3>
 <p>If you prefer to use 3D Slicer's full capabilities while still utilizing the features from RapidBrachyMCTPS or you already use 3D Slicer and want to add RapidBrachyMCTPS to your existing toolkit, you can do so by installing RapidBrachy as a custom module.</p>
 <p>To get started, install <a href="https://www.slicer.org/">3D Slicer</a>. Then clone the repositories <a href="https://github.com/engerlab/RapidBrachyGUI.git">RapidBrachyGUI</a> and <a href="https://github.com/engerlab/brachyutils">brachyutils</a>. We recommend the location <code>${HOME}/Software/</code> for cloning these repositories.</p>
-<h4 id="install-brachyutils">Install brachyutils</h4>
-<p>You'll need to install brachyutils inside 3D Slicer's python environment. Launch the 3D Slicer interface and inside the Python Console, run:</p>
+<h4 id="install-brachyutils-dependencies">Install brachyutils + Dependencies</h4>
+<p>You'll need to install brachyutils and its dependencies inside 3D Slicer's python environment. Launch the 3D Slicer interface and inside the Python Console, run:</p>
 <pre><code class="language-python">from slicer.util import pip_install
 pip_install(&quot;-e /Path/To/brachyutils&quot;)
+pip_install('botorch ax-platform optuna optunahub cmaes &quot;botorch[fully_bayesian]&quot;')
 </code></pre>
 <p>Note: if you are using <strong>Windows</strong>, the Path/To/brachyutils should take forward slashes '/' and not backslashes '\'.</p>
 <p>Restart 3D Slicer, then run </p>
