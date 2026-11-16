@@ -37,11 +37,12 @@ If you prefer to use 3D Slicer's full capabilities while still utilizing the fea
 
 To get started, install [3D Slicer](https://www.slicer.org/). Then clone the repositories [RapidBrachyGUI](https://github.com/engerlab/RapidBrachyGUI.git) and [brachyutils](https://github.com/engerlab/brachyutils). We recommend the location `${HOME}/Software/` for cloning these repositories.
 
-#### Install brachyutils
-You'll need to install brachyutils inside 3D Slicer's python environment. Launch the 3D Slicer interface and inside the Python Console, run:
+#### Install brachyutils + Dependencies
+You'll need to install brachyutils and its dependencies inside 3D Slicer's python environment. Launch the 3D Slicer interface and inside the Python Console, run:
 ```python
 from slicer.util import pip_install
 pip_install("-e /Path/To/brachyutils")
+pip_install('botorch ax-platform optuna optunahub cmaes "botorch[fully_bayesian]"')
 ```
 Note: if you are using **Windows**, the Path/To/brachyutils should take forward slashes '/' and not backslashes '\\'.
 
