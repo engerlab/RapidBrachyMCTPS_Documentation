@@ -14,6 +14,7 @@ nav:
   - Dose: dose.md
   - Optimizing Dwell Times: optimization.md
   - DVH Metrics: dvh.md
+  - Comparison: comparison.md
   - Data Saving: export.md
   - Scripting: scripting.md
   - Nuclear Medicine: nm.md

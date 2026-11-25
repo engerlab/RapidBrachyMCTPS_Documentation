@@ -26,3 +26,7 @@ Once the optimization finishes, review your results in the **DVH tab**. If the r
 ### Graphical Optimization
 
 To perform manual graphical optimization, click the `Enable` button next to `Graphical Optimization`. You can then click and drag the isodose lines directly in the viewing panels to adjust the dose distribution. As you modify the lines, the dwell times in the catheter table will update automatically to reflect your changes.
+
+### Optimization Template
+
+You can save your optimization constraints as an optimization template so that they may be loaded in at another time.

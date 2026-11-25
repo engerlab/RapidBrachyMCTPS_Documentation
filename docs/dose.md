@@ -20,6 +20,8 @@ Enter the desired prescription dose in Grays. Select your desired algorithm for 
 2. Click `Calculate Dose`.
 3. The dose will be loaded and the catheter table will be populated. The catheter table dwell times can be manually modified.
 
+![TG43](img/dose_TG43.png){ width="600" }
+
 #### MC
 To perform Monte Carlo simulations, you will need to have installed RapidBrachyMC. See the instructions on [installing RapidBrachyMC](installation.md#installing-rapidbrachymc) for details.
 
