@@ -99,6 +99,10 @@
                 </li>
               </ul>
               <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../comparison/">Comparison</a>
+                </li>
+              </ul>
+              <ul>
                 <li class="toctree-l1"><a class="reference internal" href="../export/">Data Saving</a>
                 </li>
               </ul>
@@ -134,7 +138,16 @@
             <div class="section" itemprop="articleBody">
               
                 <h1 id="dvh-metrics">DVH Metrics</h1>
-<p>You can view and analyze your DVH metrics in the <strong>DVH tab</strong> of the RapidBrachy module. To calculate metrics for a specific contoured structure, double-click a field to enter your target value, and the system will automatically populate the remaining metrics for that structure.</p>
+<p>You can view and analyze your DVH metrics in the <strong>DVH tab</strong> of the RapidBrachy module. </p>
+<ol>
+<li>Click the <code>Add Structure</code> button to add a structure for which you would like to see the DVH metrics. </li>
+<li>Select the structure from the <code>Structure</code> drop-down menu.</li>
+<li>Select the metric you would like the see for that particular structure: D (Dose), V (Volume).</li>
+<li>Enter the desired quantity for that metric along with the unit (% or cc).</li>
+<li>A value will appear. You can view it as a percentage or in units of Gray.</li>
+<li>You can also set an acceptable and ideal limit. These limits will colour the value box green if both limits are respected, yellow if only the acceptable limit is respected, and red if the acceptable limit is not respected.</li>
+<li>You can also save a DVH template, which can be loaded back in later to restore your DVH settings.</li>
+</ol>
 <p><img alt="dvh" src="../img/dvh.png" width="600" /></p>
 <p>The DVH plot should automatically appear in the top-right display panel. If it is not visible, you can restore it by clicking the layout menu <img alt="fourup" src="../img/fourup.png" width="25" /> and selecting the Four-Up Plot option <img alt="fourUpPlot" src="../img/fourUpPlot.png" width="25" />. </p>
 <p><img alt="plot" src="../img/plot.png" width="500" /></p>
@@ -144,7 +157,7 @@
           </div><footer>
     <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
         <a href="../optimization/" class="btn btn-neutral float-left" title="Optimizing Dwell Times"><span class="icon icon-circle-arrow-left"></span> Previous</a>
-        <a href="../export/" class="btn btn-neutral float-right" title="Data Saving">Next <span class="icon icon-circle-arrow-right"></span></a>
+        <a href="../comparison/" class="btn btn-neutral float-right" title="Comparison">Next <span class="icon icon-circle-arrow-right"></span></a>
     </div>
 
   <hr/>
@@ -170,7 +183,7 @@
       <span><a href="../optimization/" style="color: #fcfcfc">&laquo; Previous</a></span>
     
     
-      <span><a href="../export/" style="color: #fcfcfc">Next &raquo;</a></span>
+      <span><a href="../comparison/" style="color: #fcfcfc">Next &raquo;</a></span>
     
   </span>
 </div>
